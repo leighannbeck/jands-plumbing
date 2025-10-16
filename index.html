@@ -1,67 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>J & S Plumbing and Heating</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vite App</title>
+  <link href="/src/index.css" rel="stylesheet">
 </head>
 <body>
-<header class="navContainer">
-  <a href="/"></a><img src="#" alt="J&S Plumbing Logo"></a>
-  <h1>J&S Plumbing and Heating</h1>
-  <nav>
-    <ul class="navLinks">
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#contact">Contact Us</a></li>
-    </ul>
-  </nav>
-</header>
+
+<!-- Top Nav Bar -->
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+  <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo"/>
+      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">J&S Plumbing and Heating</span>
+    </a>
+    <div class="flex items-center space-x-6 rtl:space-x-reverse">
+      <a href="tel:5541251234" class="text-sm  text-gray-500 dark:text-white hover:underline">(575) 538-2973</a>
+      <a href="#contact" class="text-sm  text-blue-600 dark:text-blue-500 hover:underline">Contact Us</a>
+    </div>
+  </div>
+</nav>
+<nav class="bg-gray-50 dark:bg-gray-700">
+  <div class="max-w-screen-xl px-4 py-3 mx-auto">
+    <div class="flex items-center">
+      <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
+        <li>
+          <a href="/" class="text-gray-900 dark:text-white hover:underline" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="#about" class="text-gray-900 dark:text-white hover:underline">About</a>
+        </li>
+        <li>
+          <a href="#services" class="text-gray-900 dark:text-white hover:underline">Services</a>
+        </li>
+        <li>
+          <a href="#testimonials" class="text-gray-900 dark:text-white hover:underline">Testimonials</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <main>
+
   <!-- Hero Image/Section -->
-  <section id="Home">
-    <img src="https://placehold.co/600x350" alt="">
-    <!-- mini service preview container -->
-    <div class="heroServiceContainer">
-      <img src="https://placehold.co/100" alt="">
-      <div>
-      <p class="heroServiceTagline">
-        Trusted Plumbing Solutions Since 1981
+  <section
+    class="bg-center bg-no-repeat bg-[url('/jumbotron-img.jpeg')] bg-cover bg-gray-700 bg-blend-multiply">
+    <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+      <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Trusted
+        Plumbing Solutions Since 1981</h1>
+      <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Quality plumbing service backed by
+        over 40 years of experience.
       </p>
-      <p>
-        Quality plumbing service backed by over 40 years of experience.
-      </p>
+      <div class="">
+        <a href="#about"
+           class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+          Learn more
+        </a>
       </div>
     </div>
+  </section>
 
-    <!-- mini service preview container -->
-    <div class="heroServiceContainer">
-      <img src="https://placehold.co/100" alt="">
-      <div>
-        <p class="heroServiceTagline">
-          Comfort You Can Count On, All Year Round
-        </p>
-        <p>
-          Expert heating and cooling solutions for total home comfort.
-        </p>
+  <!-- mini service preview container -->
+  <section class="grid gap-8 lg:grid-cols-3 sm:grid-cols-2 p-8 bg-gray-50 dark:bg-gray-800">
+    <!-- mini services card  -->
+    <a href="#"
+       class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+      <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+           src="/docs/images/blog/image-4.jpg" alt="">
+      <div class="flex flex-col justify-between p-4 leading-normal">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Plumbing</h5>
+        <p class="italic font-semibold text-gray-700 dark:text-gray-400">Trusted Plumbing
+          Solutions Since
+          1981
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Quality plumbing service backed by over 40 years of experience.</p>
       </div>
-    </div>
+    </a>
 
-    <!-- mini service preview container -->
-    <div class="heroServiceContainer">
-      <img src="https://placehold.co/100" alt="">
-      <div>
-        <p class="heroServiceTagline">
-          Protecting Your Property's Essential Systems
-        </p>
-        <p>
-          Professional water, sewer, and gas line services you can trust.
-        </p>
+    <!-- mini services card  -->
+    <a href="#"
+       class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+      <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+           src="/docs/images/blog/image-4.jpg" alt="">
+      <div class="flex flex-col justify-between p-4 leading-normal">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
+          acquisitions 2021</h5>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
+          acquisitions of 2021 so far, in reverse chronological order.</p>
       </div>
-    </div>
+    </a>
+
+    <!-- mini services card  -->
+    <a href="#"
+       class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+      <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+           src="/docs/images/blog/image-4.jpg" alt="">
+      <div class="flex flex-col justify-between p-4 leading-normal">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
+          acquisitions 2021</h5>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
+          acquisitions of 2021 so far, in reverse chronological order.</p>
+      </div>
+    </a>
   </section>
 
   <section id="about">
@@ -75,6 +116,56 @@
       </p>
     </div>
   </section>
+  <!-- Photo Gallery -->
+
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="grid gap-4">
+      <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="">
+      </div>
+      <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
+      </div>
+      <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
+      </div>
+    </div>
+    <div class="grid gap-4">
+      <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="">
+      </div>
+      <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="">
+      </div>
+      <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="">
+      </div>
+    </div>
+    <div class="grid gap-4">
+      <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
+      </div>
+      <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="">
+      </div>
+      <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="">
+      </div>
+    </div>
+    <div class="grid gap-4">
+      <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="">
+      </div>
+      <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="">
+      </div>
+      <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
 
   <section id="services">
     <h2>Our Services</h2>
@@ -155,17 +246,116 @@
   </section>
 
   <section id="testimonials">
-    <h2>Testimonials</h2>
-    <div>
-      <img src="" alt="">
-      <p><!-- --></p>
+
+
+    <div
+      class="grid mb-8 border border-gray-200 rounded-lg shadow-xs dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-white dark:bg-gray-800">
+      <figure
+        class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e dark:bg-gray-800 dark:border-gray-700">
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Very easy this was to integrate</h3>
+          <p class="my-4">If you care for your time, I hands down would go with this."</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center ">
+          <img class="rounded-full w-9 h-9"
+               src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png"
+               alt="profile picture">
+          <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+            <div>Bonnie Green</div>
+            <div class="text-sm text-gray-500 dark:text-gray-400 ">Developer at Open AI</div>
+          </div>
+        </figcaption>
+      </figure>
+      <figure
+        class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-se-lg dark:bg-gray-800 dark:border-gray-700">
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Solid foundation for any project</h3>
+          <p class="my-4">Designing with Figma components that can be easily translated to the utility classes of
+            Tailwind CSS is a huge timesaver!"</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center ">
+          <img class="rounded-full w-9 h-9"
+               src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png"
+               alt="profile picture">
+          <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+            <div>Roberta Casas</div>
+            <div class="text-sm text-gray-500 dark:text-gray-400">Lead designer at Dropbox</div>
+          </div>
+        </figcaption>
+      </figure>
+      <figure
+        class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-es-lg md:border-b-0 md:border-e dark:bg-gray-800 dark:border-gray-700">
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Mindblowing workflow</h3>
+          <p class="my-4">Aesthetically, the well designed components are beautiful and will undoubtedly level up your
+            next application."</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center ">
+          <img class="rounded-full w-9 h-9"
+               src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="profile picture">
+          <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+            <div>Jese Leos</div>
+            <div class="text-sm text-gray-500 dark:text-gray-400">Software Engineer at Facebook</div>
+          </div>
+        </figcaption>
+      </figure>
+      <figure
+        class="flex flex-col items-center justify-center p-8 text-center bg-white border-gray-200 rounded-b-lg md:rounded-se-lg dark:bg-gray-800 dark:border-gray-700">
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Efficient Collaborating</h3>
+          <p class="my-4">You have many examples that can be used to create a fast prototype for your team."</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center ">
+          <img class="rounded-full w-9 h-9"
+               src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png"
+               alt="profile picture">
+          <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+            <div>Joseph McFall</div>
+            <div class="text-sm text-gray-500 dark:text-gray-400">CTO at Google</div>
+          </div>
+        </figcaption>
+      </figure>
     </div>
+
 
   </section>
 
   <section id="contact">
 
   </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-white rounded-lg shadow-sm dark:bg-gray-900 m-4">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+          <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo"/>
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">J&S Plumbing and
+            Heating</span>
+        </a>
+        <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+          <li>
+            <a href="#" class="hover:underline me-4 md:me-6">About</a>
+          </li>
+          <li>
+            <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+          </li>
+          <li>
+            <a href="#" class="hover:underline">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"/>
+      <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/"
+                                                                                            class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
+    </div>
+  </footer>
+
 </main>
+<script type="module" src="/src/main.js"></script>
 </body>
 </html>
