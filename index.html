@@ -3,42 +3,53 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vite App</title>
+  <title>J&S Plumbing and Heating</title>
+
   <link href="/src/index.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/tfm4ufr.css">
   <script src='./src/main.js'></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdZZ3rUewbgFa3aI5TBPcX5O7myx1cJ5I&libraries=places"></script>
 
 </head>
-<body>
+<body class="bg-true-blue">
 
 <!-- Top Nav Bar -->
-<nav class="bg-white border-gray-200 dark:bg-gray-900">
+<nav class="bg-navy border-gray-200">
   <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
     <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
       <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo"/>
-      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">J&S Plumbing and Heating</span>
+      <span class="self-center text-2xl font-bold text-light-blue whitespace-nowrap font-title-font">J&S
+        Plumbing
+        and
+        Heating</span>
     </a>
     <div class="flex items-center space-x-6 rtl:space-x-reverse">
-      <a href="tel:5541251234" class="text-sm  text-gray-500 dark:text-white hover:underline">(575) 538-2973</a>
-      <a href="#contact" class="text-sm  text-blue-600 dark:text-blue-500 hover:underline">Contact Us</a>
+      <a href="tel:5541251234" class="text-sm  text-gray-500 hover:underline">(575) 538-2973</a>
+      <div class="">
+        <a href="#about"
+           class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+          Contact Us
+        </a>
+      </div>
+
     </div>
   </div>
 </nav>
-<nav class="bg-gray-50 dark:bg-gray-700">
+<nav class="bg-[#E8F4FD]">
   <div class="max-w-screen-xl px-4 py-3 mx-auto">
     <div class="flex items-center">
       <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
         <li>
-          <a href="/" class="text-gray-900 dark:text-white hover:underline" aria-current="page">Home</a>
+          <a href="/" class="text-gray-900 hover:underline" aria-current="page">Home</a>
         </li>
         <li>
-          <a href="#about" class="text-gray-900 dark:text-white hover:underline">About</a>
+          <a href="#about" class="text-gray-900 hover:underline">About</a>
         </li>
         <li>
-          <a href="#services" class="text-gray-900 dark:text-white hover:underline">Services</a>
+          <a href="#services" class="text-gray-900 hover:underline">Services</a>
         </li>
         <li>
-          <a href="#testimonials" class="text-gray-900 dark:text-white hover:underline">Testimonials</a>
+          <a href="#testimonials" class="text-gray-900 hover:underline">Testimonials</a>
         </li>
       </ul>
     </div>
@@ -49,9 +60,10 @@
 
   <!-- Hero Image/Section -->
   <section
-    class="bg-center bg-no-repeat bg-[url('/jumbotron-img.jpeg')] bg-cover bg-gray-700 bg-blend-multiply">
+    class="bg-center bg-no-repeat bg-[url('/J&S-location.png')] bg-cover bg-gray-700 bg-blend-multiply">
     <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
-      <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Trusted
+      <h1
+        class="mb-4 text-4xl font-extrabold font-title tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Trusted
         Plumbing Solutions Since 1981</h1>
       <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Quality plumbing service backed by
         over 40 years of experience.
@@ -66,44 +78,44 @@
   </section>
 
   <!-- Mini Service Preview Section -->
-  <section class="grid gap-8 lg:grid-cols-3 sm:grid-cols-2 p-8 bg-gray-50 dark:bg-gray-800">
+  <section class="grid gap-8 lg:grid-cols-3 sm:grid-cols-2 p-8 bg-gray-50">
 
     <!-- mini services card  -->
     <a href="#"
-       class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+       class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100">
       <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
            src="/docs/images/blog/image-4.jpg" alt="">
       <div class="flex flex-col justify-between p-4 leading-normal">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Plumbing</h5>
-        <p class="italic font-semibold text-gray-700 dark:text-gray-400">Trusted Plumbing
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Plumbing</h5>
+        <p class="italic font-semibold text-gray-700">Trusted Plumbing
           Solutions Since
           1981
-          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Quality plumbing service backed by over 40 years of experience.</p>
+          <p class="mb-3 font-normal text-gray-700">Quality plumbing service backed by over 40 years of experience.</p>
       </div>
     </a>
 
     <!-- mini services card  -->
     <a href="#"
-       class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+       class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100">
       <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
            src="/docs/images/blog/image-4.jpg" alt="">
       <div class="flex flex-col justify-between p-4 leading-normal">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Noteworthy technology
           acquisitions 2021</h5>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
+        <p class="mb-3 font-normal text-gray-700">Here are the biggest enterprise technology
           acquisitions of 2021 so far, in reverse chronological order.</p>
       </div>
     </a>
 
     <!-- mini services card  -->
     <a href="#"
-       class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+       class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100">
       <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
            src="/docs/images/blog/image-4.jpg" alt="">
       <div class="flex flex-col justify-between p-4 leading-normal">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Noteworthy technology
           acquisitions 2021</h5>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
+        <p class="mb-3 font-normal text-gray-700">Here are the biggest enterprise technology
           acquisitions of 2021 so far, in reverse chronological order.</p>
       </div>
     </a>
@@ -176,54 +188,54 @@
     <h2>Our Services</h2>
 
     <!-- container for individual service img  -->
-    <section class="bg-white dark:bg-gray-900">
+    <section class="bg-white">
       <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
         <div class="max-w-screen-md mb-8 lg:mb-16">
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Designed for business teams like yours</h2>
-          <p class="text-gray-500 sm:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">Designed for business teams like yours</h2>
+          <p class="text-gray-500 sm:text-xl">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
         </div>
         <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
           <div>
-            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-              <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12">
+              <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
             </div>
-            <h3 class="mb-2 text-xl font-bold dark:text-white">Marketing</h3>
-            <p class="text-gray-500 dark:text-gray-400">Plan it, create it, launch it. Collaborate seamlessly with all  the organization and hit your marketing goals every month with our marketing plan.</p>
+            <h3 class="mb-2 text-xl font-bold">Marketing</h3>
+            <p class="text-gray-500">Plan it, create it, launch it. Collaborate seamlessly with all  the organization and hit your marketing goals every month with our marketing plan.</p>
           </div>
           <div>
-            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-              <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path></svg>
+            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12">
+              <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path></svg>
             </div>
-            <h3 class="mb-2 text-xl font-bold dark:text-white">Legal</h3>
-            <p class="text-gray-500 dark:text-gray-400">Protect your organization, devices and stay compliant with our structured workflows and custom permissions made for you.</p>
+            <h3 class="mb-2 text-xl font-bold">Legal</h3>
+            <p class="text-gray-500">Protect your organization, devices and stay compliant with our structured workflows and custom permissions made for you.</p>
           </div>
           <div>
-            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-              <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path><path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path></svg>
+            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12">
+              <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path><path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path></svg>
             </div>
-            <h3 class="mb-2 text-xl font-bold dark:text-white">Business Automation</h3>
-            <p class="text-gray-500 dark:text-gray-400">Auto-assign tasks, send Slack messages, and much more. Now power up with hundreds of new templates to help you get started.</p>
+            <h3 class="mb-2 text-xl font-bold">Business Automation</h3>
+            <p class="text-gray-500">Auto-assign tasks, send Slack messages, and much more. Now power up with hundreds of new templates to help you get started.</p>
           </div>
           <div>
-            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-              <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"></path><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"></path></svg>
+            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12">
+              <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"></path><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"></path></svg>
             </div>
-            <h3 class="mb-2 text-xl font-bold dark:text-white">Finance</h3>
-            <p class="text-gray-500 dark:text-gray-400">Audit-proof software built for critical financial operations like month-end close and quarterly budgeting.</p>
+            <h3 class="mb-2 text-xl font-bold">Finance</h3>
+            <p class="text-gray-500">Audit-proof software built for critical financial operations like month-end close and quarterly budgeting.</p>
           </div>
           <div>
-            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-              <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path></svg>
+            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12">
+              <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path></svg>
             </div>
-            <h3 class="mb-2 text-xl font-bold dark:text-white">Enterprise Design</h3>
-            <p class="text-gray-500 dark:text-gray-400">Craft beautiful, delightful experiences for both marketing and product with real cross-company collaboration.</p>
+            <h3 class="mb-2 text-xl font-bold">Enterprise Design</h3>
+            <p class="text-gray-500">Craft beautiful, delightful experiences for both marketing and product with real cross-company collaboration.</p>
           </div>
           <div>
-            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-              <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg>
+            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12">
+              <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg>
             </div>
-            <h3 class="mb-2 text-xl font-bold dark:text-white">Operations</h3>
-            <p class="text-gray-500 dark:text-gray-400">Keep your company’s lights on with customizable, iterative, and structured workflows built for all efficient teams and individual.</p>
+            <h3 class="mb-2 text-xl font-bold">Operations</h3>
+            <p class="text-gray-500">Keep your company’s lights on with customizable, iterative, and structured workflows built for all efficient teams and individual.</p>
           </div>
         </div>
       </div>
@@ -235,19 +247,19 @@
 
     <h2>What Our Customers Say</h2>
     <div id="reviews-section"
-      class="grid mb-8 border border-gray-200 rounded-lg shadow-xs dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-white dark:bg-gray-800">
+      class="grid mb-8 border border-gray-200 rounded-lg shadow-xs  md:mb-12 md:grid-cols-2 bg-white ">
       <div
-        class="container flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e dark:bg-gray-800 dark:border-gray-700">
+        class="container flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e">
 
-        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-          <!--<h3 class="text-lg font-semibold text-gray-900 dark:text-white">REVIEW TITLE HERE</h3>-->
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8">
+          <!--<h3 class="text-lg font-semibold text-gray-900">REVIEW TITLE HERE</h3>-->
           <figcaption class="flex items-center justify-center ">
             <img class="rounded-full w-9 h-9"
                  src="/rebecca_shumway.png"
                  alt="profile picture">
-            <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+            <div class="space-y-0.5 font-medium text-left rtl:text-right ms-3">
               <div>Adam Polley</div>
-              <img src="" alt="Five Stars" class="text-sm text-gray-500 dark:text-gray-400 "/>
+              <img src="" alt="Five Stars" class="text-sm text-gray-500"/>
             </div>
           </figcaption>
           <p class="my-4"><span class="font-semibold">Price assessment: </span>Great price</p>
@@ -255,17 +267,17 @@
         </blockquote>
       </div>
       <div
-        class="container flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e dark:bg-gray-800 dark:border-gray-700">
+        class="container flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e">
 
-        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-          <!--<h3 class="text-lg font-semibold text-gray-900 dark:text-white">REVIEW TITLE HERE</h3>-->
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8">
+          <!--<h3 class="text-lg font-semibold text-gray-900">REVIEW TITLE HERE</h3>-->
           <figcaption class="flex items-center justify-center ">
             <img class="rounded-full w-9 h-9"
                  src="/rebecca_shumway.png"
                  alt="profile picture">
-            <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+            <div class="space-y-0.5 font-medium text-left rtl:text-right ms-3">
               <div>Rebecca Shumway</div>
-              <img src="" alt="Five Stars" class="text-sm text-gray-500 dark:text-gray-400 "/>
+              <img src="" alt="Five Stars" class="text-sm text-gray-500"/>
             </div>
           </figcaption>
           <p class="my-4">
@@ -274,72 +286,114 @@
       </div>
 
       <div
-        class="container flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e dark:bg-gray-800 dark:border-gray-700">
+        class="container flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e">
 
-        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-          <!--<h3 class="text-lg font-semibold text-gray-900 dark:text-white">REVIEW TITLE HERE</h3>-->
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8">
+          <!--<h3 class="text-lg font-semibold text-gray-900">REVIEW TITLE HERE</h3>-->
           <figcaption class="flex items-center justify-center ">
             <img class="rounded-full w-9 h-9"
                  src="/rebecca_shumway.png"
                  alt="profile picture">
-            <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
-              <div>Rebecca Shumway</div>
-              <img src="" alt="Five Stars" class="text-sm text-gray-500 dark:text-gray-400 "/>
+            <div class="space-y-0.5 font-medium text-left rtl:text-right ms-3">
+              <div>Courtney Jones</div>
+              <img src="" alt="Five Stars" class="text-sm text-gray-500"/>
             </div>
           </figcaption>
           <p class="my-4">
-            Jason came out to my place and found the problem with my propane wall furnace yesterday.  He had to take apart the furnace guts to get to the problem.  Thank you Jason for your determined "get 'her done" attitude!!!  You are the Master Furnace Fixer.  My furnace is now working like a champ after a  non-J&S plumber looked for the problem for 8 days!  I have been using J&S for the last 19 years on my own home and my rentals.  They are reasonably priced, can fix any plumbing & heating issue AND THE J & S STAFF ALWAYS ANSWERS THE PHONE AND RETURNS YOUR CALLS.</p>
+            Louie is absolutely amazing. Him and his helper came out and fixed my issue on a short notice and solved not only my main issue but helped me prevent others!! If a Plumber could wear a Super Hero cape it would be Louie!!!          </p>
         </blockquote>
       </div>
       <div
-        class="container flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e dark:bg-gray-800 dark:border-gray-700">
+        class="container flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e">
 
-        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-          <!--<h3 class="text-lg font-semibold text-gray-900 dark:text-white">REVIEW TITLE HERE</h3>-->
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8">
+          <!--<h3 class="text-lg font-semibold text-gray-900">REVIEW TITLE HERE</h3>-->
           <figcaption class="flex items-center justify-center ">
             <img class="rounded-full w-9 h-9"
                  src="/rebecca_shumway.png"
                  alt="profile picture">
-            <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
-              <div>Rebecca Shumway</div>
-              <img src="" alt="Five Stars" class="text-sm text-gray-500 dark:text-gray-400 "/>
+            <div class="space-y-0.5 font-medium text-left rtl:text-right ms-3">
+              <div>Mark Donnell</div>
+              <img src="" alt="Five Stars" class="text-sm text-gray-500"/>
             </div>
           </figcaption>
           <p class="my-4">
-            Jason came out to my place and found the problem with my propane wall furnace yesterday.  He had to take apart the furnace guts to get to the problem.  Thank you Jason for your determined "get 'her done" attitude!!!  You are the Master Furnace Fixer.  My furnace is now working like a champ after a  non-J&S plumber looked for the problem for 8 days!  I have been using J&S for the last 19 years on my own home and my rentals.  They are reasonably priced, can fix any plumbing & heating issue AND THE J & S STAFF ALWAYS ANSWERS THE PHONE AND RETURNS YOUR CALLS.</p>
+
+            This is a good company, with nice employees, but they frequently don't answer their phones and can be very difficult to contact. I wrote a very bad review for them earlier this week, but after finally getting in touch with them, I am modifying it to this. They are extremely busy, but if you can reach them, they will do good work.
         </blockquote>
       </div>
 
     </div>
 
     <!-- Review CTA -->
-    <section class="bg-white dark:bg-gray-900">
+    <section class="bg-white">
       <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
         <div class="mx-auto max-w-screen-sm text-center">
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold leading-tight text-gray-900 dark:text-white">Start your free trial today</h2>
-          <p class="mb-6 font-light text-gray-500 dark:text-gray-400 md:text-lg">Try Flowbite Platform for 30 days. No credit card required.</p>
-          <a href="#" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">Free trial for 30 days</a>
+          <h2 class="mb-4 text-4xl tracking-tight font-extrabold leading-tight text-gray-900">Start your free trial today</h2>
+          <p class="mb-6 font-light text-gray-500 md:text-lg">Try Flowbite Platform for 30 days. No credit card required.</p>
+          <a href="#" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none">Free trial for 30 days</a>
         </div>
       </div>
     </section>
 
   </section>
 
+  <!-- Contact Section -->
   <section id="contact">
+    <form action="">
+      <div class="mb-6">
+        <label for="name-input" class="block mb-2 text-sm font-medium text-gray-900">Name</label>
+        <input type="text" id="name-input"
+               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+      </div>
+
+      <div class="mb-6">
+        <label for="email-input" class="block mb-2 text-sm font-medium text-gray-900">Email</label>
+        <input type="text" id="email-input"
+               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+      </div>
+
+
+      <form class="max-w-sm mx-auto">
+        <label for="phone-input" class="block mb-2 text-sm font-medium text-gray-900">Phone number:</label>
+        <div class="relative">
+          <div class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none">
+            <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 19 18">
+              <path d="M18 13.446a3.02 3.02 0 0 0-.946-1.985l-1.4-1.4a3.054 3.054 0 0 0-4.218 0l-.7.7a.983.983 0 0 1-1.39 0l-2.1-2.1a.983.983 0 0 1 0-1.389l.7-.7a2.98 2.98 0 0 0 0-4.217l-1.4-1.4a2.824 2.824 0 0 0-4.218 0c-3.619 3.619-3 8.229 1.752 12.979C6.785 16.639 9.45 18 11.912 18a7.175 7.175 0 0 0 5.139-2.325A2.9 2.9 0 0 0 18 13.446Z"/>
+            </svg>
+          </div>
+          <input type="text" id="phone-input" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required />
+        </div>
+        <p id="helper-text-explanation" class="mt-2 text-sm text-gray-500">Select a phone number that matches the format.</p>
+      </form>
+
+
+
+      <label for="message" class="block mb-2 text-sm font-medium text-gray-900 ">Message</label>
+      <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Write your thoughts here..."></textarea>
+
+
+      <label class="inline-flex items-center cursor-pointer">
+        <input type="checkbox" value="" class="sr-only peer">
+        <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:bg-blue-600"></div>
+        <span class="ms-3 text-sm font-medium text-gray-900">Emergency</span>
+      </label>
+
+    </form>
 
   </section>
 
 
   <!-- Footer -->
-  <footer class="bg-white rounded-lg shadow-sm dark:bg-gray-900 m-4">
+  <footer class="bg-white rounded-lg shadow-sm  m-4">
     <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
       <div class="sm:flex sm:items-center sm:justify-between">
         <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
           <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo"/>
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">J&S Plumbing and
+          <span class="self-center text-2xl font-semibold whitespace-nowrap">J&S Plumbing and
             Heating</span>
         </a>
-        <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+        <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0">
           <li>
             <a href="#" class="hover:underline me-4 md:me-6">About</a>
           </li>
@@ -354,8 +408,8 @@
           </li>
         </ul>
       </div>
-      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"/>
-      <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/"
+      <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8"/>
+      <span class="block text-sm text-gray-500 sm:text-center">© 2023 <a href="https://flowbite.com/"
                                                                                             class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
     </div>
   </footer>
