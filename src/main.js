@@ -1,9 +1,5 @@
 import 'flowbite'
 
-const stars = [star1, star2]
-function rating(stars) {
+function validation() {
 
-  for (star of stars) {
-
-  }
 }

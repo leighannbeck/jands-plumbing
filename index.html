@@ -4,12 +4,13 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>J&S Plumbing and Heating</title>
-  <link rel="icon" type="image/x-icon" href="/favicon.png">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
 
   <link href="/src/index.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/tfm4ufr.css">
   <script src='./src/main.js'></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdZZ3rUewbgFa3aI5TBPcX5O7myx1cJ5I&libraries=places"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdZZ3rUewbgFa3aI5TBPcX5O7myx1cJ5I&libraries=places"></script>
   <script src="https://kit.fontawesome.com/bf0b0c6d03.js" crossorigin="anonymous"></script>
 
 </head>
@@ -19,36 +20,38 @@
 <nav class="bg-navy border-gray-200">
   <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
     <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="/logo-v4.png" class="h-8" alt="J&S Plumbing and Heating Logo" class="w-4xl"/>
+      <img src="/assets/logo-v4.png" class="h-8" alt="J&S Plumbing and Heating Logo" class="w-4xl"/>
       <span class="self-center text-2xl font-bold text-light-blue whitespace-nowrap font-title">J & S Plumbing and Heating</span>
     </a>
     <div class="flex items-center space-x-6 rtl:space-x-reverse">
-      <a href="tel:5541251234" class="text-sm text-gray-500 hover:underline font-body-text">(575) 538-2973</a>
-      <div class="">
-        <a href="#about"
-           class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-body-text font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+      <button class="">
+        <a href="#contact"
+           class="inline-flex justify-center bg-light-blue hover:text-light-blue items-center py-2 px-4 sm:ms-4 text-base font-body-text font-medium text-center text-navy rounded-lg border-1 border-light-blue hover:bg-navy">
           Contact Us
         </a>
-      </div>
+      </button>
 
     </div>
   </div>
 </nav>
 <nav class="bg-light-blue">
   <div class="max-w-screen-xl px-4 py-3 mx-auto">
-    <div class="flex items-center">
+    <div class="flex items-center justify-end">
       <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
         <li>
-          <a href="/" class="text-gray-900 hover:underline font-body-text" aria-current="page">Home</a>
+          <a href="/" class="text-gray-900 hover:underline hover:text-red font-body-text" aria-current="page">Home</a>
         </li>
         <li>
-          <a href="#about" class="text-gray-900 hover:underline font-body-text">About</a>
+          <a href="#about" class="text-gray-900 hover:underline hover:text-red font-body-text">About</a>
         </li>
         <li>
-          <a href="#services" class="text-gray-900 hover:underline font-body-text">Services</a>
+          <a href="#gallery" class="text-gray-900 hover:underline hover:text-red font-body-text">Gallery</a>
         </li>
         <li>
-          <a href="#testimonials" class="text-gray-900 hover:underline font-body-text">Testimonials</a>
+          <a href="#services" class="text-gray-900 hover:underline hover:text-red font-body-text">Services</a>
+        </li>
+        <li>
+          <a href="#testimonials" class="text-gray-900 hover:underline hover:text-red font-body-text">Testimonials</a>
         </li>
       </ul>
     </div>
@@ -62,9 +65,11 @@
     class="bg-center bg-no-repeat bg-[url('/storefront.png')] bg-cover bg-gray-700 bg-blend-multiply">
     <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
       <h1
-        class="mb-4 text-4xl font-extrabold font-title tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Trusted
+        class="mb-4 text-4xl font-extrabold font-title tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
+        Trusted
         Plumbing Solutions Since 1981</h1>
-      <p class="mb-8 text-lg font-body-text font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Quality plumbing service
+      <p class="mb-8 text-lg font-body-text font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Quality plumbing
+        service
         backed by
         over 40 years of experience.
       </p>
@@ -78,9 +83,10 @@
   </section>
 
   <!-- Mini Service Preview Section -->
-  <section class="grid gap-8 lg:grid-cols-3 sm:grid-cols-2 p-8 bg-gray-50">
+  <section class="grid gap-8 lg:grid-cols-3 sm:grid-cols-2 p-8 bg-red">
 
     <!-- mini services card  -->
+
     <a href="#"
        class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100">
       <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
@@ -90,8 +96,9 @@
         <p class="italic font-body-text font-semibold text-gray-700">Trusted Plumbing
           Solutions Since
           1981
-          <p class="mb-3 font-body-text font-normal text-gray-700">Quality plumbing service backed by over 40 years of
-        experience.</p>
+        <p class="mb-3 font-body-text font-normal text-gray-700">Quality plumbing service backed by over 40 years of
+        experience.
+          .</p>
       </div>
     </a>
 
@@ -104,8 +111,8 @@
         <h5 class="mb-2 text-2xl font-heading font-bold tracking-tight text-gray-900">HVAC</h5>
         <p class="italic font-body-text font-semibold text-gray-700">Comfort You Can Count On, All Year Round
         <p class="mb-3 font-body-text font-normal text-gray-700">Expert heating and cooling solutions for total home
-        comfort
-        .</p>
+          comfort
+          .</p>
       </div>
     </a>
 
@@ -118,9 +125,9 @@
         <h5 class="mb-2 text-2xl font-body-text font-heading font-bold tracking-tight text-gray-900">Utility</h5>
         <p class="italic font-body-text font-semibold text-gray-700">Protecting Your Property's Essential Systems
         <p class="mb-3 font-body-text font-normal text-gray-700">Professional water, sewer, and gas line services you
-        can
-        trust.
-      </p>
+          can
+          trust.
+        </p>
       </div>
     </a>
   </section>
@@ -128,22 +135,57 @@
 
   <!-- About Us Section -->
   <section id="about">
-    <h2 class="font-heading">About Us</h2>
+    <section class="bg-white dark:bg-gray-900">
+      <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+        <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+          <h2 class="mb-4 text-4xl tracking-tight font-heading font-extrabold text-gray-900 dark:text-white">It's
+            all in the family</h2>
+          <p class="mb-4">J&S Plumbing and Heating has been serving the community since 1981, when Jerry Beck acquired
+            Lane Plumbing Company and transformed it into a thriving family business. Under Jerry's leadership as owner,
+            the company expanded its expertise to include a full-service HVAC department. In 2018, Matthew Beck
+            continued the family tradition by purchasing the business from his father and establishing J&S as an LLC,
+            ensuring the same commitment to quality service for generations to come.</p>
+        </div>
+        <div class="grid grid-cols-2 gap-4 mt-8">
+          <img class="w-full rounded-lg"
+               src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
+               alt="office content 1">
+          <img class="mt-4 w-full lg:mt-10 rounded-lg"
+               src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
+               alt="office content 2">
+        </div>
+      </div>
+    </section>
 
-    <!-- img and text container for flex -->
-    <div>
-      <img src="" alt="">
-      <p>
-
-      </p>
-    </div>
+    <section class="bg-white dark:bg-gray-900">
+      <div
+        class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6" dir="rtl">
+        <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+          <blockquote class="text-xl italic font-semibold text-gray-900 dark:text-white">
+            <svg class="w-8 h-8 text-gray-400 dark:text-gray-600 mb-4" aria-hidden="true"
+                 xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+              <path
+                d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
+            </svg>
+            <p>"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login
+              screen to complex dashboard. Perfect choice for your next SaaS application."</p>
+          </blockquote>
+        </div>
+        <div class="grid grid-cols-2 gap-4 mt-8">
+          <img class="w-full rounded-lg"
+               src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
+               alt="office content 1">
+        </div>
+      </div>
+    </section>
   </section>
 
   <!-- Photo Gallery -->
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+  <div id="gallery" class="grid grid-cols-2 md:grid-cols-4 gap-4">
     <div class="grid gap-4">
       <div>
-        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="">
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
+             alt="">
       </div>
 
     </div>
@@ -159,82 +201,104 @@
         <div class="max-w-screen-md mb-8 lg:mb-16">
           <h2 class="mb-4 text-4xl tracking-tight font-heading font-extrabold text-gray-900">Designed for business
             teams like yours</h2>
-          <p class="text-gray-500 sm:text-xl font-body-text">Here at Flowbite we focus on markets where technology, innovation, and
+          <p class="text-gray-500 sm:text-xl font-body-text">Here at Flowbite we focus on markets where technology,
+            innovation, and
             capital can unlock long-term value and drive economic growth.</p>
         </div>
         <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
           <div>
             <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12">
-              <i class="fa-solid fa-wrench fa-2xl"></i>
+              <i class="fa-solid fa-wrench fa-2xl text-red"></i>
             </div>
             <h3 class="mb-2 text-xl font-heading font-bold">Maintenance and Repair</h3>
-            <p class="text-gray-500 font-body-text">We provide comprehensive maintenance and repair services for all your plumbing needs, including fixtures, water heaters, and interior leak detection. Our HVAC services cover heating systems, air conditioners, and evaporative coolers, ensuring year-round comfort for your home or business.</p>
+            <p class="text-gray-500 font-body-text">We provide comprehensive maintenance and repair services for all
+              your plumbing needs, including fixtures, water heaters, and interior leak detection. Our HVAC services
+              cover heating systems, air conditioners, and evaporative coolers, ensuring year-round comfort for your
+              home or business.</p>
           </div>
           <div>
             <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12">
-              <i class="fa-solid fa-droplet fa-2xl"></i>
+              <i class="fa-solid fa-droplet fa-2xl text-red"></i>
             </div>
             <h3 class="mb-2 text-xl font-heading font-bold">Water and Sewage</h3>
-            <p class="text-gray-500 font-body-text">Our experienced technicians locate and repair leaks in water and sewer lines, clear sewage stoppages, and handle complete installation of new water and sewer systems. We deliver reliable solutions to keep your property's infrastructure running smoothly.</p>
+            <p class="text-gray-500 font-body-text">Our experienced technicians locate and repair leaks in water and
+              sewer lines, clear sewage stoppages, and handle complete installation of new water and sewer systems. We
+              deliver reliable solutions to keep your property's infrastructure running smoothly.</p>
           </div>
           <div>
             <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12">
-              <i class="fa-solid fa-temperature-high fa-2xl"></i>
+              <i class="fa-solid fa-temperature-high fa-2xl text-red"></i>
             </div>
             <h3 class="mb-2 text-xl font-heading font-bold">HVAC Seasonal Changes</h3>
 
             <div id="accordion-collapse" data-accordion="collapse">
               <h2 id="accordion-collapse-heading-1">
                 <button type="button"
-                        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-1" aria-expanded="false" aria-controls="accordion-collapse-body-1">
+                        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                        data-accordion-target="#accordion-collapse-body-1" aria-expanded="false"
+                        aria-controls="accordion-collapse-body-1">
                   <span class="font-body-text font-semibold">Spring/Summer</span>
-                  <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                  <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                       xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M9 5 5 1 1 5"/>
                   </svg>
                 </button>
               </h2>
               <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
                 <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
                   <p class="mb-2 font-body-text text-gray-500 dark:text-gray-400">We shut down your heating system and
-                    perform complete startup services for your cooling system, whether evaporative coolers or air conditioning units. </p>
+                    perform complete startup services for your cooling system, whether evaporative coolers or air
+                    conditioning units. </p>
                 </div>
               </div>
               <h2 id="accordion-collapse-heading-2">
                 <button type="button"
-                        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border rounded-b-xl border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+                        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border rounded-b-xl border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                        data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
+                        aria-controls="accordion-collapse-body-2">
                   <span class="font-body-text font-semibold">Fall/Winter</span>
-                  <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                  <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                       xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M9 5 5 1 1 5"/>
                   </svg>
                 </button>
               </h2>
               <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
                 <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                  <p class="mb-2 text-gray-500 dark:text-gray-400">We properly shut down cooling systems with preventative maintenance to avoid freezing and leaks, then start up and service your heating system, including thorough cleaning and filter replacement.</p>
+                  <p class="mb-2 text-gray-500 dark:text-gray-400">We properly shut down cooling systems with
+                    preventative maintenance to avoid freezing and leaks, then start up and service your heating system,
+                    including thorough cleaning and filter replacement.</p>
                 </div>
               </div>
             </div>
           </div>
           <div>
             <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12">
-              <i class="fa-solid fa-tape fa-2xl"></i>
+              <i class="fa-solid fa-tape fa-2xl text-red"></i>
             </div>
             <h3 class="mb-2 text-xl font-heading font-bold">Custom Duct Fabrication</h3>
-            <p class="text-gray-500 font-body-text">We specialize in custom-designed ductwork for new installations in both residential and commercial properties. Our sheet metal fabrication services are also available for walk-in customers with specialized needs.</p>
+            <p class="text-gray-500 font-body-text">We specialize in custom-designed ductwork for new installations in
+              both residential and commercial properties. Our sheet metal fabrication services are also available for
+              walk-in customers with specialized needs.</p>
           </div>
           <div>
             <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12">
-              <i class="fa-solid fa-fire fa-2xl"></i>
+              <i class="fa-solid fa-fire fa-2xl text-red"></i>
             </div>
             <h3 class="mb-2 text-xl font-heading font-bold">Gas & Liquid Propane</h3>
-            <p class="text-gray-500 font-body-text">We conduct gas pressure testing for residential, commercial, and mobile home properties, and provide expert leak detection and repair services to ensure your safety and peace of mind.</p>
+            <p class="text-gray-500 font-body-text">We conduct gas pressure testing for residential, commercial, and
+              mobile home properties, and provide expert leak detection and repair services to ensure your safety and
+              peace of mind.</p>
           </div>
           <div>
             <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12">
-              <i class="fa-solid fa-building fa-2xl"></i>
+              <i class="fa-solid fa-building fa-2xl text-red"></i>
             </div>
             <h3 class="mb-2 text-xl font-heading font-bold">Commercial HVAC</h3>
-            <p class="text-gray-500 font-body-text">Our team services and repairs commercial HVAC units of all sizes. Contact us for detailed estimates on new commercial projects tailored to your business needs.</p>
+            <p class="text-gray-500 font-body-text">Our team services and repairs commercial HVAC units of all sizes.
+              Contact us for detailed estimates on new commercial projects tailored to your business needs.</p>
           </div>
         </div>
       </div>
@@ -242,75 +306,67 @@
 
   </section>
 
-  <section id="testimonials">
-
-    <h2 class="font-heading">What Our Customers Say</h2>
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+    <div class="max-w-screen-md mb-8 lg:mb-16">
+      <h2 class="mb-4 text-5xl tracking-tight font-heading font-extrabold text-gray-100">What Our Customers
+        Say</h2>
+    </div>
     <div id="reviews-section"
-      class="grid mb-8 border border-gray-200 rounded-lg shadow-xs  md:mb-12 md:grid-cols-2 bg-white ">
+         class="grid mb-8 border border-gray-200 rounded-xl md:mb-12 md:grid-cols-2 bg-white shadow-md shadow-light-blue">
       <div
-        class="container flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e">
+        class="container flex flex-col items-center justify-center p-8  text-center bg-white border-b border-gray-200 rounded-t-0 md:rounded-ss-lg md:border-e">
 
-        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8">
+        <blockquote class="max-w-2xl mx-auto text-gray-500 ">
           <!--<h3 class="text-lg font-semibold text-gray-900">REVIEW TITLE HERE</h3>-->
-          <figcaption class="flex items-center justify-center ">
+          <div class="flex items-center justify-center ">
             <img class="rounded-full w-9 h-9"
-                 src="/rebecca_shumway.png"
+                 src="/reviews/rebecca_shumway.png"
                  alt="profile picture">
             <div class="space-y-0.5 font-body-text font-medium text-left rtl:text-right ms-3">
-              <div>Adam Polley</div>
-              <img src="" alt="Five Stars" class="text-sm text-gray-500"/>
-            </div>
-          </figcaption>
-          <p class="font-body-text my-4"><span class="font-semibold">Price assessment: </span>Great price</p>
-          <p class="font-body-text my-4"><span class=" font-semibold">Price: </span>$1–100</p>
-        </blockquote>
-      </div>
-      <div
-        class="container flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e">
-
-        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8">
-          <!--<h3 class="text-lg font-semibold text-gray-900">REVIEW TITLE HERE</h3>-->
-          <figcaption class="flex items-center justify-center ">
-            <img class="rounded-full w-9 h-9"
-                 src="/rebecca_shumway.png"
-                 alt="profile picture">
-            <div class="space-y-0.5 font-body-text font-body-text font-medium text-left rtl:text-right ms-3">
               <div>Rebecca Shumway</div>
               <img src="" alt="Five Stars" class="text-sm text-gray-500"/>
             </div>
-          </figcaption>
+          </div>
           <p class="my-4 font-body-text ">
-            Jason came out to my place and found the problem with my propane wall furnace yesterday.  He had to take apart the furnace guts to get to the problem.  Thank you Jason for your determined "get 'her done" attitude!!!  You are the Master Furnace Fixer.  My furnace is now working like a champ after a  non-J&S plumber looked for the problem for 8 days!  I have been using J&S for the last 19 years on my own home and my rentals.  They are reasonably priced, can fix any plumbing & heating issue AND THE J & S STAFF ALWAYS ANSWERS THE PHONE AND RETURNS YOUR CALLS.</p>
+            Jason came out to my place and found the problem with my propane wall furnace yesterday. He had to take
+            apart the furnace guts to get to the problem. Thank you Jason for your determined "get 'her done"
+            attitude!!! You are the Master Furnace Fixer. My furnace is now working like a champ after a non-J&S plumber
+            looked for the problem for 8 days! I have been using J&S for the last 19 years on my own home and my
+            rentals. They are reasonably priced, can fix any plumbing & heating issue AND THE J & S STAFF ALWAYS ANSWERS
+            THE PHONE AND RETURNS YOUR CALLS.</p>
         </blockquote>
       </div>
 
       <div
-        class="container flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e">
+        class="container flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-ss-lg md:border-e">
 
-        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8">
+        <blockquote class="max-w-2xl mx-auto text-gray-500">
           <!--<h3 class="text-lg font-semibold text-gray-900">REVIEW TITLE HERE</h3>-->
-          <figcaption class="flex items-center justify-center ">
+          <div class="flex items-center justify-center ">
             <img class="rounded-full w-9 h-9"
-                 src="/rebecca_shumway.png"
+                 src="/reviews/courtney-jones.png"
                  alt="profile picture">
             <div class="space-y-0.5 font-body-text font-medium text-left rtl:text-right ms-3">
               <div>Courtney Jones</div>
               <img src="" alt="Five Stars" class="text-sm text-gray-500"/>
             </div>
-          </figcaption>
+          </div>
           <p class="font-body-text my-4">
-            Louie is absolutely amazing. Him and his helper came out and fixed my issue on a short notice and solved not only my main issue but helped me prevent others!! If a Plumber could wear a Super Hero cape it would be Louie!!!
+            Louie is absolutely amazing. Him and his helper came out and fixed my issue on a short notice and solved not
+            only my main issue but helped me prevent others!! If a Plumber could wear a Super Hero cape it would be
+            Louie!!!
           </p>
         </blockquote>
       </div>
       <div
-        class="container flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e">
+        class="container flex flex-col items-center justify-center p-8 text-center bg-white border-b-0 border-gray-200 rounded-b-2xl md:border-e">
 
-        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8">
+        <blockquote class="max-w-2xl mx-auto text-gray-500">
           <!--<h3 class="text-lg font-semibold text-gray-900">REVIEW TITLE HERE</h3>-->
           <figcaption class="flex items-center justify-center ">
             <img class="rounded-full w-9 h-9"
-                 src="/rebecca_shumway.png"
+                 src="/reviews/mark-donnell.png"
                  alt="profile picture">
             <div class="space-y-0.5 font-body-text font-medium text-left rtl:text-right ms-3">
               <div>Mark Donnell</div>
@@ -318,109 +374,168 @@
             </div>
           </figcaption>
           <p class="font-body-text my-4">
-            This is a good company, with nice employees, but they frequently don't answer their phones and can be very difficult to contact. I wrote a very bad review for them earlier this week, but after finally getting in touch with them, I am modifying it to this. They are extremely busy, but if you can reach them, they will do good work.
+            This is a good company, with nice employees, but they frequently don't answer their phones and can be very
+            difficult to contact. I wrote a very bad review for them earlier this week, but after finally getting in
+            touch with them, I am modifying it to this. They are extremely busy, but if you can reach them, they will do
+            good work.
         </blockquote>
       </div>
+      <div
+        class="container flex flex-col items-center justify-center p-8 text-center bg-white border-t border-gray-200 rounded-b-xl md:rounded-ss-lg md:border-e">
 
-    </div>
-
-    <!-- Review CTA -->
-    <section class="bg-white">
-      <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-        <div class="mx-auto max-w-screen-sm text-center">
-          <h2 class="mb-4 text-4xl tracking-tight font-heading font-extrabold leading-tight text-gray-900">Start your
-            free
-            trial today</h2>
-          <p class="mb-6 font-body-text font-light text-gray-500 md:text-lg">Try Flowbite Platform for 30 days. No credit card required.</p>
-          <a href="#"
-             class="font-body-text text-navy bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none">Free trial for 30 days</a>
-        </div>
+        <blockquote class="max-w-2xl mx-auto text-gray-500">
+          <!--<h3 class="text-lg font-semibold text-gray-900">REVIEW TITLE HERE</h3>-->
+          <figcaption class="flex items-center justify-center ">
+            <img class="rounded-full w-9 h-9"
+                 src="/reviews/dave-becker.png"
+                 alt="profile picture">
+            <div class="space-y-0.5 font-body-text font-medium text-left rtl:text-right ms-3">
+              <div>Dave Becker</div>
+              <img src="" alt="Five Stars" class="text-sm text-gray-500"/>
+            </div>
+          </figcaption>
+          <p class="font-body-text my-4">J & S was able to diagnose a cracked and plugged pipe under my floor, and their
+            crew opened a hole in the concrete, dug out the dirt to reach the problem, and fixed it, in just over half a
+            day. They were willing to repour the concrete floor but I was able to do that myself. Excellent work,
+            friendly folks, fixed a problem that a previous plumber was unable to. I highly recommend J & S.</p>
+        </blockquote>
       </div>
-    </section>
+    </div>
+  </section>
 
+  <!-- Review CTA -->
+  <section class="border-t-2 border-b-2 border-gray-200">
+    <div class="bg-red py-8 px-4 mx-auto sm:py-16 lg:px-6">
+      <div class="mx-auto max-w-screen-sm text-center">
+        <h2 class="mb-4 text-4xl tracking-tight font-heading font-extrabold leading-tight text-light-blue">Like our
+          service?</h2>
+        <p class="mb-6 font-body-text font-light text-gray-300 md:text-lg">Leave us a review on Google letting us
+          know how we did. We welcome all feedback!</p>
+        <button type="button"
+                class="text-red bg-light-blue font-medium rounded-lg px-5 py-2.5 me-2 mb-2 border border-light-blue hover:bg-red">
+          <a href="http://bit.ly/4hgb5ct"
+             class="font-body-text text-red hover:text-light-blue font-medium rounded-lg px-5 py-2.5 mr-2 mb-2 text-xl">Write
+            a Review</a></button>
+      </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact">
-    <form action="">
-      <div class="mb-6">
-        <label for="name-input"
-               class="block mb-2 text-sm font-heading font-medium text-gray-900">Name
-        </label>
-        <input type="text" id="name-input" placeholder="First and Last Name"
-               class="bg-gray-50 border border-gray-300 font-body-text text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-      </div>
-
-      <div class="mb-6">
-        <label for="email-input" class="block mb-2 text-sm font-heading font-medium text-gray-900">Email</label>
-        <input type="text" id="email-input" placeholder="Email Address"
-               class="bg-gray-50 border border-gray-300 font-body-text text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-      </div>
-
-
-      <form class="max-w-sm mx-auto">
-        <label for="phone-input" class="block mb-2 text-sm font-heading font-medium text-gray-900">Phone number:</label>
-        <div class="relative">
-          <div class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none">
-          </div>
-          <input type="text" id="phone-input" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 font-body-text text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full  p-2.5" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required />
+  <section id="contact" class="py-8">
+    <div class="container py-12 px-32 mx-auto grid grid-cols-2 gap-16">
+      <form action="" class="max-w-2xl p-8 rounded-lg ">
+        <div class="mb-6">
+          <label for="name-input"
+                 class="block mb-2 text-md font-body-text font-bold tracking-wider text-white ">Name
+          </label>
+          <input type="text" id="name-input" placeholder="First and Last Name" required
+                 class="bg-gray-50 border border-gray-300 font-body-text text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
         </div>
-        <p id="helper-text-explanation" class="mt-2 text-sm text-gray-500">Select a phone number that matches the format.</p>
+
+        <div class="mb-6">
+          <label for="email-input" class="block mb-2 text-md font-body-text font-bold tracking-wider text-white ">Email</label>
+          <input type="text" id="email-input" placeholder="Email Address" required
+                 class="bg-gray-50 border border-gray-300 font-body-text text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+        </div>
+
+        <div class="mb-6">
+          <label for="phone-input" class="block mb-2 text-md font-body-text font-bold tracking-wider text-white ">Phone
+            number</label>
+          <input type="text" id="phone-input" aria-describedby="helper-text-explanation"
+                 class="bg-gray-50 border border-gray-300 font-body-text text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full  p-2.5"
+                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"/>
+        </div>
+
+        <div class="mb-6">
+          <label for="message"
+                 class="block mb-2 text-md font-body-text font-bold tracking-wider text-white">
+            Message</label>
+          <textarea id="message" rows="4" required
+                    class="block p-2.5 w-full font-body-text text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Write your thoughts here..."></textarea>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <label class="inline-flex items-center cursor-pointer">
+            <input type="checkbox" value="toggle" class="sr-only peer">
+            <div
+              class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:bg-red"></div>
+            <span class="ms-3 text-sm font-body-text font-medium text-gray-900">Is this an emergency?</span>
+          </label>
+          <button type="submit"
+                  class="mt-4 text-light-blue bg-red font-body-text font-semibold rounded-lg text-md px-5 py-2.5 mr-2 mb-2border-navy border-2 hover:bg-light-blue hover:text-red"
+            onclick="alert('Thank you for your feedback!')">
+            Submit
+          </button>
+        </div>
       </form>
+      <div class="container mx-auto bg-light-blue rounded-xl px-12 flex flex-col justify-center items-center">
+        <div class="flex items-baseline justify-center gap-2">
+        <i class="fa-solid fa-location-dot fa-xl py-2"></i>
+          <h5 class="mb-3 text-2xl font-semibold font-heading tracking-tight text-gray-900">Find Us</h5>
+        </div>
+          <address class="mb-2 font-normal text-true-blue text-center font-body-text"><a href="http://bit.ly/46Yoxyn" target="_blank">2815
+            Pinos Altos Rd, Silver City, NM
+            88061</a></address>
+        <hr class="h-px my-8 border-1 border-red w-3/4 mx-auto"/>
 
+        <div class="flex items-baseline justify-center gap-2">
+          <i class="fa-solid fa-store fa-xl py-2"></i>
+          <h5 class="mb-3 text-2xl font-heading font-semibold tracking-tight text-gray-900">Visit Us</h5>
+        </div>
+        <ul>
+          <li class="font-body-text"><span class="font-bold">Monday - Friday:</span> &nbsp;7am - 5pm</li>
+          <li class="font-body-text"><span class="font-bold">Saturday - Sunday:</span> &nbsp;Closed</li>
+        </ul>
+        <hr class="h-px my-8 border-1 border-red w-3/4 mx-auto"/>
 
+        <div class="flex items-baseline justify-center gap-2">
+          <i class="fa-solid fa-phone fa-xl py-2"></i>
+          <h5 class="mb-3 text-2xl font-heading font-semibold tracking-tight text-gray-900 dark:text-white">Call Us</h5>
+        </div>
+        <a href="tel:123-456-7890" class="font-body-text">123-456-7890</a>
+        <a href="tel:123-456-7890" class="font-body-text">123-456-7890</a>
 
-      <label for="message" class="block mb-2 text-sm font-medium font-heading text-gray-900 ">Message</label>
-      <textarea id="message" rows="4"
-                class="block p-2.5 w-full font-body-text text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Write your thoughts here..."></textarea>
-
-
-      <label class="inline-flex items-center cursor-pointer">
-        <input type="checkbox" value="" class="sr-only peer">
-        <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:bg-blue-600"></div>
-        <span class="ms-3 text-sm font-body-text font-medium text-gray-900">Emergency</span>
-      </label>
-      <button type="submit"
-              class="mt-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-body-text font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none">Submit
-      </button>
-    </form>
-
+      </div>
+    </div>
   </section>
 
 
   <!-- Footer -->
-  <footer class="bg-white rounded-lg shadow-sm  m-4">
-    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-      <div class="sm:flex sm:items-center sm:justify-between">
-        <a href="/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-          <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="J&S Plumbing and Heating Logo"/>
-          <span class="self-center text-2xl font-title font-semibold whitespace-nowrap">J&S Plumbing and
+  <footer class="bg-black px-16 py-10">
+    <div class="bg-light-blue rounded-lg shadow-sm m-4">
+      <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <a href="/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+            <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="J&S Plumbing and Heating Logo"/>
+            <span class="self-center text-2xl text-navy font-title font-semibold whitespace-nowrap">J&S Plumbing and
             Heating</span>
-        </a>
-        <ul class="flex flex-wrap items-center mb-6 text-sm font-body-text font-medium text-gray-500 sm:mb-0">
-          <li>
-            <a href="#" class="hover:underline me-4 md:me-6">About</a>
-          </li>
-          <li>
-            <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
-          </li>
-          <li>
-            <a href="#" class="hover:underline">Contact</a>
-          </li>
-        </ul>
+          </a>
+          <ul class="flex flex-wrap items-center mb-6 text-sm font-body-text font-medium text-gray-500 sm:mb-0">
+            <li>
+              <a href="#" class="hover:underline me-4 md:me-6 text-gray">About</a>
+            </li>
+            <li>
+              <a href="#" class="hover:underline me-4 md:me-6 text-gray">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#" class="hover:underline me-4 md:me-6 text-gray">Licensing</a>
+            </li>
+            <li>
+              <a href="#" class="hover:underline text-gray">Attribution</a>
+            </li>
+          </ul>
+        </div>
+        <hr class="my-6 border-navy sm:mx-auto lg:my-8"/>
+        <span class="block font-body-text text-sm text-gray sm:text-center">© 2023 <a href="https://flowbite.com/"
+                                                                                          class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
       </div>
-      <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8"/>
-      <span class="block font-body-text text-sm text-gray-500 sm:text-center">© 2023 <a href="https://flowbite.com/"
-                                                                                            class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
     </div>
   </footer>
-<!-- Attributions -->
+  <!-- Attributions -->
+  <!--<a href="https://www.flaticon.com/free-icons/star" title="star icons">Star icons created by Pixel perfect -
+  Flaticon</a>
   <a href="https://www.flaticon.com/free-icons/star" title="star icons">Star icons created by Pixel perfect - Flaticon</a>
-  <a href="https://www.flaticon.com/free-icons/star" title="star icons">Star icons created by Pixel perfect - Flaticon</a>
-  <a href="https://www.vecteezy.com/free-vector/african-pattern">African Pattern Vectors by Vecteezy</a>
+  <a href="https://www.vecteezy.com/free-vector/african-pattern">African Pattern Vectors by Vecteezy</a>-->
 </main>
 <script type="module" src="/src/main.js"></script>
 </body>
