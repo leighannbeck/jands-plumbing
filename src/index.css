@@ -14,7 +14,7 @@
   --color-light-blue: #E8F4FD;
 
   /* Fonts */
-  --font-title: Montserrat, sans-serif;
-  /*font-weight: 600;
-  font-style: normal;*/
+  --font-title: "nexa-rust-slab-black-shad-2", sans-serif;
+  --font-heading: "nexa-text", sans-serif;
+  --font-body-text: "poppins", sans-serif;
 }
