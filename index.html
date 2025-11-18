@@ -6,12 +6,42 @@
   <title>J&S Plumbing and Heating</title>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
 
+  <!-- Stylesheet and JS file-->
   <link href="/src/index.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.typekit.net/tfm4ufr.css">
   <script src='./src/main.js'></script>
+
+  <!-- Adobe Type Kit for Fonts -->
+  <link rel="stylesheet" href="https://use.typekit.net/tfm4ufr.css">
+  <!-- Font Awesome Kit for Icons-->
+  <script src="https://kit.fontawesome.com/bf0b0c6d03.js" crossorigin="anonymous"></script>
+  <!-- Google API for Maps -->
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdZZ3rUewbgFa3aI5TBPcX5O7myx1cJ5I&libraries=places"></script>
-  <script src="https://kit.fontawesome.com/bf0b0c6d03.js" crossorigin="anonymous"></script>
+
+  <!-- Contact Form Submission -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      // https://dashboard.emailjs.com/admin/account
+      emailjs.init({
+        publicKey: "YOUR_PUBLIC_KEY",
+      });
+    })();
+  </script>
+  <script type="text/javascript">
+    window.onload = function() {
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // these IDs from the previous steps
+        emailjs.sendForm('contact_service', 'contact_form', this)
+          .then(() => {
+            console.log('SUCCESS!');
+          }, (error) => {
+            console.log('FAILED...', error);
+          });
+      });
+    }
+  </script>
 
 </head>
 <body class="bg-true-blue">
@@ -26,7 +56,7 @@
     <div class="flex items-center space-x-6 rtl:space-x-reverse">
       <button class="">
         <a href="#contact"
-           class="inline-flex justify-center bg-light-blue hover:text-light-blue items-center py-2 px-4 sm:ms-4 text-base font-body-text font-medium text-center text-navy rounded-lg border-1 border-light-blue hover:bg-navy">
+           class="inline-flex justify-center bg-light-blue hover:text-light-blue items-center py-2 px-4 sm:ms-4 text-base font-body-text font-medium text-center text-navy rounded-lg border-1 border-light-blue hover:bg-true-blue">
           Contact Us
         </a>
       </button>
@@ -90,7 +120,7 @@
     <a href="#"
        class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100">
       <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-           src="/docs/images/blog/image-4.jpg" alt="">
+           src="/graphics/plumbing.png" alt="">
       <div class="flex flex-col justify-between p-4 leading-normal">
         <h5 class="mb-2 text-2xl font-heading font-bold tracking-tight text-gray-900">Plumbing</h5>
         <p class="italic font-body-text font-semibold text-gray-700">Trusted Plumbing
@@ -106,7 +136,7 @@
     <a href="#"
        class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100">
       <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-           src="/docs/images/blog/image-4.jpg" alt="">
+           src="/graphics/hvac.png" alt="">
       <div class="flex flex-col justify-between p-4 leading-normal">
         <h5 class="mb-2 text-2xl font-heading font-bold tracking-tight text-gray-900">HVAC</h5>
         <p class="italic font-body-text font-semibold text-gray-700">Comfort You Can Count On, All Year Round
@@ -120,7 +150,7 @@
     <a href="#"
        class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100">
       <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-           src="/docs/images/blog/image-4.jpg" alt="">
+           src="/graphics/sewage.png" alt="">
       <div class="flex flex-col justify-between p-4 leading-normal">
         <h5 class="mb-2 text-2xl font-body-text font-heading font-bold tracking-tight text-gray-900">Utility</h5>
         <p class="italic font-body-text font-semibold text-gray-700">Protecting Your Property's Essential Systems
@@ -607,7 +637,7 @@
           </ul>
         </div>
         <hr class="my-6 border-navy sm:mx-auto lg:my-8"/>
-        <span class="block font-body-text text-sm text-gray sm:text-center">© 2023 <a href="https://flowbite.com/"
+        <span class="block font-body-text text-sm text-gray sm:text-center">&copy; 2025 <a href="/"
                                                                                           class="hover:underline">J&S
           Plumbing and Heating, LLC™</a>. All Rights Reserved.</span>
       </div>
