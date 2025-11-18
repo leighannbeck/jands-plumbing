@@ -32,7 +32,7 @@
     window.onload = function() {
       document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault();
-        // these IDs from the previous steps
+         // these IDs from the previous steps
         emailjs.sendForm('contact_service', 'contact_form', this)
           .then(() => {
             console.log('SUCCESS!');
@@ -89,7 +89,7 @@
 </nav>
 
 <main>
-
+<!--fake change -->
   <!-- Hero Image/Section -->
   <section
     class="bg-center bg-no-repeat bg-[url('/storefront.png')] bg-cover bg-gray-700 bg-blend-multiply">
@@ -113,7 +113,7 @@
   </section>
 
   <!-- Mini Service Preview Section -->
-  <section class="grid gap-8 lg:grid-cols-3 sm:grid-cols-2 p-8 bg-red">
+  <section class="grid gap-8 lg:grid-cols-3 md:grid-cols-1 p-8 bg-red">
 
     <!-- mini services card  -->
 
@@ -164,10 +164,10 @@
 
   <!-- About Us Section -->
   <section id="about">
-    <section class="bg-white dark:bg-gray-900">
+    <section class="bg-white ">
       <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
         <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-          <h2 class="mb-4 text-4xl tracking-tight font-heading font-extrabold text-gray-900 dark:text-white">It's
+          <h2 class="mb-4 text-4xl tracking-tight font-heading font-extrabold text-gray-900">It's
             all in the family</h2>
           <p class="mb-4">J&S Plumbing and Heating has been serving the community since 1981, when Jerry Beck acquired
             Lane Plumbing Company and transformed it into a thriving family business. Under Jerry's leadership as owner,
@@ -569,7 +569,7 @@
         Questions? Need service? Want an estimate? Contact our experienced team! We're ready to assist you with all
         your plumbing and HVAC needs.</p>
     </div>
-    <div class="container py-12 px-8 mx-auto grid grid-cols-2 gap-16">
+    <div class="container py-12 px-8 mx-auto lg:grid lg:grid-cols-2 md:grid-cols-1 lg:gap-16">
       <form action="" class="max-w-2xl p-8 rounded-lg ">
         <div class="mb-6">
           <label for="name-input"
@@ -610,7 +610,7 @@
           </button>
         </div>
       </form>
-      <div class="container mx-auto bg-light-blue rounded-xl px-12 flex flex-col justify-center items-center">
+      <div class="container mx-auto bg-light-blue rounded-xl px-12 py-8 flex flex-col justify-center items-center">
         <div class="flex items-baseline justify-center gap-2">
         <i class="fa-solid fa-location-dot fa-xl py-2"></i>
           <h5 class="mb-3 text-2xl font-semibold font-heading tracking-tight text-gray-900">Find Us</h5>
@@ -646,25 +646,23 @@
   <footer class="bg-black px-8 py-6">
     <div class="bg-light-blue rounded-lg shadow-sm m-4">
       <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-        <div class="sm:flex sm:items-center sm:justify-between">
+        <div class="grid grid-cols-2 md:grid-cols-1">
           <a href="/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
             <img src="/assets/logo-v4.png" class="h-8" alt="J&S Plumbing and Heating Logo"/>
             <span class="self-center text-2xl text-navy font-title font-semibold whitespace-nowrap">J&S Plumbing and
             Heating</span>
           </a>
-          <ul class="flex flex-wrap items-center mb-6 text-sm font-body-text font-medium text-gray-500 sm:mb-0">
+          <ul
+            class="grid grid-cols-4 md:pt-8 mb-6 text-sm font-body-text font-medium text-gray-500 sm:mb-0">
             <li>
               <a href="#about" class="hover:underline me-4 md:me-6 text-gray">About</a>
             </li>
-            <li>
+            <li class="hover:underline me-4 md:me-6 text-gray">
 <!--              <a href="#" class="hover:underline me-4 md:me-6 text-gray">Privacy Policy</a>-->
-
-
-
               <!-- Modal toggle -->
               <a data-modal-target="default-modal" data-modal-toggle="default-modal"
                  class="hover:underline me-4 md:me-6 text-gray"
-                 type="link">
+                 type="button">
                 Privacy Policy
               </a>
 
@@ -802,7 +800,7 @@
             </li>
           </ul>
         </div>
-        <hr class="my-6 border-navy sm:mx-auto lg:my-8"/>
+        <hr class="mb-6 mt-2 border-navy sm:mx-auto"/>
         <span class="block font-body-text text-sm text-gray sm:text-center">&copy; 2025 <a href="/"
                                                                                           class="hover:underline">J&S
           Plumbing and Heating, LLC™</a>. All Rights Reserved.</span>
