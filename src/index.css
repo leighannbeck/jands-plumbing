@@ -18,3 +18,8 @@
   --font-heading: "nexa-text", sans-serif;
   --font-body-text: "poppins", sans-serif;
 }
+
+.error-message {
+  color: red;
+
+}

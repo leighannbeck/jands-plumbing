@@ -20,76 +20,97 @@
 
   <!-- Contact Form Submission -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script type="text/javascript">
-    (function() {
-      // https://dashboard.emailjs.com/admin/account
-      emailjs.init({
-        publicKey: "YOUR_PUBLIC_KEY",
-      });
-    })();
-  </script>
-  <script type="text/javascript">
-    window.onload = function() {
-      document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-         // these IDs from the previous steps
-        emailjs.sendForm('contact_service', 'contact_form', this)
-          .then(() => {
-            console.log('SUCCESS!');
-          }, (error) => {
-            console.log('FAILED...', error);
-          });
-      });
-    }
-  </script>
 
 </head>
 <body class="bg-true-blue">
 
 <!-- Top Nav Bar -->
-<nav class="bg-navy border-gray-200">
-  <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
-    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="/assets/logo-v4.png" class="h-8" alt="J&S Plumbing and Heating Logo" class=""/>
-      <span class="self-center text-2xl font-bold text-light-blue whitespace-nowrap font-title">J & S Plumbing and Heating</span>
-    </a>
-    <div class="flex items-center space-x-6 rtl:space-x-reverse">
-      <button class="">
-        <a href="#contact"
-           class="inline-flex justify-center bg-light-blue hover:text-light-blue items-center py-2 px-4 sm:ms-4 text-base font-body-text font-medium text-center text-navy rounded-lg border-1 border-light-blue hover:bg-true-blue">
-          Contact Us
-        </a>
-      </button>
 
+
+<nav class="bg-light-blue fixed w-full z-20 top-0 start-0 border-b border-default">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="/assets/logo-v4.png" class="h-7" alt="J&S Heating and Plumbing Logo">
+      <span
+        class="hidden md:inline-block self-center text-xl text-heading font-semibold whitespace-nowrap font-title text-navy">J&S
+        Heating and
+        Plumbing</span>
+    </a>
+    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+      <button type="button"
+              class="text-light-blue bg-navy rounded-lg hover:bg-true-blue box-border focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">
+        <a href="#contact">Contact Us</a>
+      </button>
+      <button data-collapse-toggle="navbar-sticky" type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm font-body-text rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary" aria-controls="navbar-sticky" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
+      </button>
     </div>
-  </div>
-</nav>
-<nav class="bg-light-blue">
-  <div class="max-w-screen-xl px-4 py-3 mx-auto">
-    <div class="flex items-center justify-around">
-      <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-lg">
+    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-default rounded-base bg-neutral-secondary-soft md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-neutral-primary">
         <li>
-          <a href="/" class="text-gray-900 hover:underline hover:text-red font-body-text" aria-current="page">Home</a>
+          <a href="#" class="block py-2 px-3 text-white bg-brand rounded-sm md:bg-transparent md:text-fg-brand md:p-0" aria-current="page">Home</a>
         </li>
         <li>
-          <a href="#about" class="text-gray-900 hover:underline hover:text-red font-body-text">About</a>
+          <a href="#" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">About</a>
         </li>
         <li>
-          <a href="#gallery" class="text-gray-900 hover:underline hover:text-red font-body-text">Gallery</a>
+          <a href="#" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Services</a>
         </li>
         <li>
-          <a href="#services" class="text-gray-900 hover:underline hover:text-red font-body-text">Services</a>
-        </li>
-        <li>
-          <a href="#testimonials" class="text-gray-900 hover:underline hover:text-red font-body-text">Testimonials</a>
+          <a href="#" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Contact</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
+
+<!--<nav class="bg-navy border-gray-200">-->
+<!--  <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">-->
+<!--    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">-->
+<!--      <img src="/assets/logo-v4.png" class="h-8" alt="J&S Plumbing and Heating Logo" class=""/>-->
+<!--      <span class="hidden mdself-center text-2xl font-bold text-light-blue whitespace-nowrap font-title">J & S-->
+<!--        Plumbing and Heating</span>-->
+<!--    </a>-->
+<!--    <div class="flex items-center space-x-6 rtl:space-x-reverse">-->
+<!--      <button class="">-->
+<!--        <a href="#contact"-->
+<!--           class="inline-flex justify-center bg-light-blue hover:text-light-blue items-center py-2 px-4 sm:ms-4 text-base font-body-text font-medium text-center text-navy rounded-lg border-1 border-light-blue hover:bg-true-blue">-->
+<!--          Contact Us-->
+<!--        </a>-->
+<!--      </button>-->
+
+<!--    </div>-->
+<!--  </div>-->
+<!--</nav>-->
+<!--<nav class="bg-light-blue">-->
+<!--  <div class="max-w-screen-xl px-4 py-3 mx-auto">-->
+<!--    <div class="flex items-center justify-around">-->
+<!--      <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-lg">-->
+<!--        <li>-->
+<!--          <a href="/" class="text-gray-900 hover:underline hover:text-red font-body-text" aria-current="page">Home</a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a href="#about" class="text-gray-900 hover:underline hover:text-red font-body-text">About</a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a href="#gallery" class="text-gray-900 hover:underline hover:text-red font-body-text">Gallery</a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a href="#services" class="text-gray-900 hover:underline hover:text-red font-body-text">Services</a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a href="#testimonials" class="text-gray-900 hover:underline hover:text-red font-body-text">Testimonials</a>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</nav>-->
+
 <main>
-<!--fake change -->
+
   <!-- Hero Image/Section -->
   <section
     class="bg-center bg-no-repeat bg-[url('/storefront.png')] bg-cover bg-gray-700 bg-blend-multiply">
@@ -656,6 +677,7 @@
              class="font-body-text text-red hover:text-light-blue font-medium rounded-lg px-5 py-2.5 mr-2 mb-2 text-xl">Write
             a Review</a></button>
       </div>
+    </div>
   </section>
 
   <!-- Contact Section -->
@@ -667,25 +689,27 @@
         your plumbing and HVAC needs.</p>
     </div>
     <div class="container py-12 px-8 mx-auto lg:grid lg:grid-cols-2 md:grid-cols-1 lg:gap-16">
-      <form action="" class="max-w-2xl p-8 rounded-lg ">
+      <form action="https://formspree.io/f/xrbdbnav" method="POST" id="contact-form" class="max-w-2xl p-8 rounded-lg">
         <div class="mb-6">
-          <label for="name-input"
+          <label for="name"
                  class="block mb-2 text-md font-body-text font-bold tracking-wider text-white ">Name
           </label>
-          <input type="text" id="name-input" placeholder="First and Last Name" required
+          <input type="text" id="name" placeholder="First and Last Name"
                  class="bg-gray-50 border border-gray-300 font-body-text text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <span id="name-error" class="error-message"></span>
         </div>
 
         <div class="mb-6">
-          <label for="email-input" class="block mb-2 text-md font-body-text font-bold tracking-wider text-white ">Email</label>
-          <input type="text" id="email-input" placeholder="Email Address" required
+          <label for="email" class="block mb-2 text-md font-body-text font-bold tracking-wider text-white ">Email</label>
+          <input type="text" id="email" placeholder="Email Address"
                  class="bg-gray-50 border border-gray-300 font-body-text text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <span id="email-error" class="error-message"></span>
         </div>
 
         <div class="mb-6">
-          <label for="phone-input" class="block mb-2 text-md font-body-text font-bold tracking-wider text-white ">Phone
+          <label for="phone" class="block mb-2 text-md font-body-text font-bold tracking-wider text-white ">Phone
             number</label>
-          <input type="text" id="phone-input" aria-describedby="helper-text-explanation"
+          <input type="text" id="phone" aria-describedby="helper-text-explanation"
                  class="bg-gray-50 border border-gray-300 font-body-text text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full  p-2.5"
                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"/>
         </div>
@@ -694,19 +718,20 @@
           <label for="message"
                  class="block mb-2 text-md font-body-text font-bold tracking-wider text-white">
             Message</label>
-          <textarea id="message" rows="4" required
+          <textarea id="message" rows="4"
                     class="block p-2.5 w-full font-body-text text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                     placeholder="Write your thoughts here..."></textarea>
+          <span id="message-error" class="error-message"></span>
         </div>
 
         <div class="flex items-center justify-between">
           <button type="submit"
-                  class="mt-4 text-light-blue bg-red font-body-text font-semibold rounded-lg text-md px-5 py-2.5 mr-2 mb-2border-navy border-2 hover:bg-light-blue hover:text-red"
-            onclick="alert('Thank you for your feedback!')">
+                  class="mt-4 text-light-blue bg-red font-body-text font-semibold rounded-lg text-md px-5 py-2.5 mr-2 mb-2border-navy border-2 hover:bg-light-blue hover:text-red">
             Submit
           </button>
         </div>
       </form>
+
       <div class="container mx-auto bg-light-blue rounded-xl px-12 py-8 flex flex-col justify-center items-center">
         <div class="flex items-baseline justify-center gap-2">
         <i class="fa-solid fa-location-dot fa-xl py-2"></i>
