@@ -1,30 +1,30 @@
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #2B5AA0;
-}
+/*body {*/
+/*  margin: 0;*/
+/*  font-family: Arial, sans-serif;*/
+/*  background-color: #2B5AA0;*/
+/*}*/
 
-/* Navigation Bar Styles */
-li {
-  list-style-type: none;
-}
+/*!* Navigation Bar Styles *!*/
+/*li {*/
+/*  list-style-type: none;*/
+/*}*/
 
-.navContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
+/*.navContainer {*/
+/*  display: flex;*/
+/*  justify-content: space-between;*/
+/*  align-items: center;*/
+/*  padding: 10px 20px;*/
+/*}*/
 
-.navLinks {
-  display: flex;
-  gap: 1.5em;
-  margin-right: 6em;
-}
+/*.navLinks {*/
+/*  display: flex;*/
+/*  gap: 1.5em;*/
+/*  margin-right: 6em;*/
+/*}*/
 
-/* Hero Section Styles */
-.heroServiceTagline {
-  font-size: 1.2em;
-  font-weight: bold;
-}
+/*!* Hero Section Styles *!*/
+/*.heroServiceTagline {*/
+/*  font-size: 1.2em;*/
+/*  font-weight: bold;*/
+/*}*/
