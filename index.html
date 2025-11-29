@@ -1,194 +1,944 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>J&S Plumbing and Heating</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+
+  <!-- Stylesheet and JS file-->
   <link href="/src/index.css" rel="stylesheet">
+  <script src='./src/main.js'></script>
+
+  <!-- Adobe Type Kit for Fonts -->
+  <link rel="stylesheet" href="https://use.typekit.net/tfm4ufr.css">
+  <!-- Font Awesome Kit for Icons-->
+  <script src="https://kit.fontawesome.com/bf0b0c6d03.js" crossorigin="anonymous"></script>
+  <!-- Google API for Maps -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdZZ3rUewbgFa3aI5TBPcX5O7myx1cJ5I&libraries=places"></script>
+
+  <!-- Contact Form Submission -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 </head>
-<body>
-<header class="navContainer">
-  <nav class="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="/" class="flex items-right space-x-2 rtl:space-x-reverse">
-        <img src="" class="h-8" alt="J&S Plumbing and Heating Logo" />
-        <span class="self-left text-2xl font-semibold whitespace-nowrap dark:text-white">J&S Plumbing and Heating</span>
-      </a>
-      <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-solid-bg" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
+<body class="bg-true-blue">
+
+<!-- Top Nav Bar -->
+
+<nav class="bg-light-blue fixed w-full z-20 top-0 start-0 border-b-3 border-red">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="/assets/logo-v4.png" class="h-7" alt="J&S Heating and Plumbing Logo">
+      <span
+        class="hidden md:inline-block self-center text-2xl text-heading font-semibold whitespace-nowrap font-title text-navy">J&S
+        Heating and
+        Plumbing</span>
+    </a>
+    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+      <button type="button"
+              class="text-light-blue bg-navy rounded-lg hover:bg-true-blue box-border focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">
+        <a href="#contact">Contact Us</a>
       </button>
-      <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
-        <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
-          <li>
-            <a href="/" class="block py-2 px-3 md:p-0 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
-          </li>
-          <li>
-            <a href="#about" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
-        </li>
-          <li>
-            <a href="#services" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
-          </li>
-          <li>
-            <a href="#testimonials" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Testimonials</a>
-          </li>
-          <li>
-            <a href="#contact" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-          </li>
-        </ul>
-      </div>
+      <button data-collapse-toggle="navbar-sticky" type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm font-body-text rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary" aria-controls="navbar-sticky" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
+      </button>
     </div>
-  </nav>
-</header>
+    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-default rounded-base bg-neutral-secondary-soft md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-neutral-primary">
+        <li>
+          <a href="/" class="block py-2 px-3 text-navy font-body-text text-xl rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent md:hover:font-semibold">Home</a>
+        </li>
+        <li>
+          <a href="#about" class="block py-2 px-3 text-navy font-body-text text-xl rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent md:hover:font-semibold">About</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-navy font-body-text text-xl rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent md:hover:font-semibold">Our Team</a>
+        </li>
+        <li>
+          <a href="#gallery" class="block py-2 px-3 text-navy font-body-text text-xl rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent md:hover:font-semibold">Gallery</a>
+        </li>
+        <li>
+          <a href="#services" class="block py-2 px-3 text-navy font-body-text text-xl rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent md:hover:font-semibold">Services</a>
+        </li>
+        <li>
+          <a href="#testimonials" class="block py-2 px-3 text-navy font-body-text text-xl rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent md:hover:font-semibold">Testimonials</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!--<nav class="bg-navy border-gray-200">-->
+<!--  <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">-->
+<!--    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">-->
+<!--      <img src="/assets/logo-v4.png" class="h-8" alt="J&S Plumbing and Heating Logo" class=""/>-->
+<!--      <span class="hidden mdself-center text-2xl font-bold text-light-blue whitespace-nowrap font-title">J & S-->
+<!--        Plumbing and Heating</span>-->
+<!--    </a>-->
+<!--    <div class="flex items-center space-x-6 rtl:space-x-reverse">-->
+<!--      <button class="">-->
+<!--        <a href="#contact"-->
+<!--           class="inline-flex justify-center bg-light-blue hover:text-light-blue items-center py-2 px-4 sm:ms-4 text-base font-body-text font-medium text-center text-navy rounded-lg border-1 border-light-blue hover:bg-true-blue">-->
+<!--          Contact Us-->
+<!--        </a>-->
+<!--      </button>-->
+
+<!--    </div>-->
+<!--  </div>-->
+<!--</nav>-->
+<!--<nav class="bg-light-blue">-->
+<!--  <div class="max-w-screen-xl px-4 py-3 mx-auto">-->
+<!--    <div class="flex items-center justify-around">-->
+<!--      <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-lg">-->
+<!--        <li>-->
+<!--          <a href="/" class="text-gray-900 hover:underline hover:text-red font-body-text" aria-current="page">Home</a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a href="#about" class="text-gray-900 hover:underline hover:text-red font-body-text">About</a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a href="#gallery" class="text-gray-900 hover:underline hover:text-red font-body-text">Gallery</a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a href="#services" class="text-gray-900 hover:underline hover:text-red font-body-text">Services</a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a href="#testimonials" class="text-gray-900 hover:underline hover:text-red font-body-text">Testimonials</a>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</nav>-->
 
 <main>
+
   <!-- Hero Image/Section -->
-  <section id="Home">
-    <img src="https://placehold.co/600x350" alt="">
-    <!-- mini service preview container -->
-    <div class="heroServiceContainer">
-      <img src="https://placehold.co/100" alt="">
-      <div>
-      <p class="heroServiceTagline">
-        Trusted Plumbing Solutions Since 1981
+  <section
+    class="bg-center bg-no-repeat bg-[url('/storefront.png')] bg-cover bg-gray-700 bg-blend-multiply">
+    <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+      <h1
+        class="mb-4 text-4xl font-extrabold font-title tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
+        Trusted
+        Plumbing Solutions Since 1981</h1>
+      <p class="mb-8 text-lg font-body-text font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Quality plumbing
+        service
+        backed by
+        over 40 years of experience.
       </p>
-      <p>
-        Quality plumbing service backed by over 40 years of experience.
-      </p>
-      </div>
-    </div>
-
-    <!-- mini service preview container -->
-    <div class="heroServiceContainer">
-      <img src="https://placehold.co/100" alt="">
-      <div>
-        <p class="heroServiceTagline">
-          Comfort You Can Count On, All Year Round
-        </p>
-        <p>
-          Expert heating and cooling solutions for total home comfort.
-        </p>
-      </div>
-    </div>
-
-    <!-- mini service preview container -->
-    <div class="heroServiceContainer">
-      <img src="https://placehold.co/100" alt="">
-      <div>
-        <p class="heroServiceTagline">
-          Protecting Your Property's Essential Systems
-        </p>
-        <p>
-          Professional water, sewer, and gas line services you can trust.
-        </p>
+      <div class="">
+        <a href="#about"
+           class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-body-text font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+          Learn more
+        </a>
       </div>
     </div>
   </section>
 
+  <!-- Mini Service Preview Section -->
+  <section class="grid gap-8 lg:grid-cols-3 md:grid-cols-1 p-8 bg-red">
+
+    <!-- mini services card  -->
+
+    <a href="#"
+       class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100">
+      <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+           src="/graphics/plumbing.png" alt="">
+      <div class="flex flex-col justify-between p-4 leading-normal">
+        <h5 class="mb-2 text-2xl font-heading font-bold tracking-tight text-gray-900">Plumbing</h5>
+        <p class="italic font-body-text font-semibold text-gray-700">Trusted Plumbing
+          Solutions Since
+          1981
+        <p class="mb-3 font-body-text font-normal text-gray-700">Quality plumbing service backed by over 40 years of
+        experience.
+          .</p>
+      </div>
+    </a>
+
+    <!-- mini services card  -->
+    <a href="#"
+       class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100">
+      <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+           src="/graphics/hvac.png" alt="">
+      <div class="flex flex-col justify-between p-4 leading-normal">
+        <h5 class="mb-2 text-2xl font-heading font-bold tracking-tight text-gray-900">HVAC</h5>
+        <p class="italic font-body-text font-semibold text-gray-700">Comfort You Can Count On, All Year Round
+        <p class="mb-3 font-body-text font-normal text-gray-700">Expert heating and cooling solutions for total home
+          comfort
+          .</p>
+      </div>
+    </a>
+
+    <!-- mini services card  -->
+    <a href="#"
+       class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100">
+      <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+           src="/graphics/sewage.png" alt="">
+      <div class="flex flex-col justify-between p-4 leading-normal">
+        <h5 class="mb-2 text-2xl font-body-text font-heading font-bold tracking-tight text-gray-900">Utility</h5>
+        <p class="italic font-body-text font-semibold text-gray-700">Protecting Your Property's Essential Systems
+        <p class="mb-3 font-body-text font-normal text-gray-700">Professional water, sewer, and gas line services you
+          can
+          trust.
+        </p>
+      </div>
+    </a>
+  </section>
+
+  <!-- About Us Section -->
   <section id="about">
-    <h2>About Us</h2>
+    <section class="bg-white ">
+      <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+        <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+          <h2 class="mb-4 text-4xl tracking-tight font-heading font-extrabold text-gray-900">It's
+            all in the family</h2>
+          <p class="mb-4">J&S Plumbing and Heating has been serving the community since 1981, when Jerry Beck acquired
+            Lane Plumbing Company and transformed it into a thriving family business. Under Jerry's leadership as owner,
+            the company expanded its expertise to include a full-service HVAC department. In 2018, Matthew Beck
+            continued the family tradition by purchasing the business from his father and establishing J&S as an LLC,
+            ensuring the same commitment to quality service for generations to come.</p>
+        </div>
+        <div class="grid grid-cols-1 gap-4 mt-8">
+          <img class="mt-4 w-3/4 lg:mt-10 rounded-lg"
+               src="/becks.png"
+               alt="office content 2">
+        </div>
+      </div>
+    </section>
 
-    <!-- img and text container for flex -->
-    <div>
-      <img src="" alt="">
-      <p>
-
-      </p>
-    </div>
+    <section class="bg-white dark:bg-gray-900">
+      <div
+        class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6" dir="rtl">
+        <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+          <blockquote class="text-xl italic font-semibold text-gray-900 dark:text-white">
+            <svg class="w-8 h-8 text-gray-400 dark:text-gray-600 mb-4" aria-hidden="true"
+                 xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+              <path
+                d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
+            </svg>
+            <p><quote>Jerry and Sue Beck built J & S Plumbing & Heating based on years of attentive, honest
+              work, and now their son, Matt continues the tradition. Matt has certainly received a strong
+              background in the business. After all, he was raised in it... from the bassinette! Sue would
+              bring him to work with her and later he rode in the truck with Dad. He began helping on the job
+            when he was old enough to handle a shovel and he worked summers in the field through high school
+              and college.</quote></p><br />
+            <p class="font-medium">Excerpt from <span class="italic">"Silver City Life
+              Magazine"</span>,
+              written by
+              <span class="italic">Joe Burgess</span> &mdash;</p>
+          </blockquote>
+        </div>
+        <div class="grid grid-cols-1 gap-4 mt-8">
+          <img class="w-half rounded-half "
+               src="/ads.png"
+               alt="Childhood picture of new owner, Matt Beck">
+        </div>
+      </div>
+    </section>
   </section>
 
+  <!-- Team Section -->
+  <section class="grid lg:grid-cols-4 gap-12 p-12 justify-center">
+
+    <!-- Chris Albers -->
+    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm ">
+        <img class="rounded-full mx-auto p-6" src="/team/chris_albers.png" alt="" />
+      <div class="p-5">
+        <a href="#">
+          <h5
+            class="mb-2 text-lg  mx-auto text-center font-bold tracking-tight text-gray-900">Christopher "Chris"
+            Albers</h5>
+          <h6 class="text-lg font-700 italic mx-auto text-center pb-2">Safety Coordinator & Lead Service Technician</h6>
+        </a>
+        <p class="mb-3 font-normal text-justify px-2 text-gray-700">With 15 years of plumbing
+          experience, Chris
+          brings
+          both expertise and efficiency to every job. As our Safety Coordinator and Lead Service Technician, he's
+          dedicated to solving even the most challenging plumbing issues while ensuring every project meets the
+          highest safety standards.</p>
+          <p class="mb-3 font-normal text-justify px-2 text-gray-700">Chris's commitment to excellence extends beyond the worksite. He's deeply involved in the community
+        as a
+          youth soccer coach, currently serving as Head Boys Soccer Coach at Silver High School and Safety Director for AYSO 309. His dedication to mentoring young athletes reflects the same care and attention to detail he brings to serving our customers.</p>
+      </div>
+    </div>
+
+    <!-- AJ Kirker -->
+    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm ">
+      <img class="rounded-full mx-auto p-6" src="/team/aj_kirker.png" alt="" />
+      <div class="p-5">
+        <a href="#">
+          <h5
+            class="mb-2 text-lg  mx-auto text-center font-bold tracking-tight text-gray-900">Alvin "AJ" Kirker, Jr.</h5>
+          <h6 class="text-lg font-700 italic mx-auto text-center pb-2">HVAC Specialist & Sheet Metal Journeyman</h6>
+        </a>
+        <p class="mb-3 font-normal text-justify px-2 text-gray-700">A lifetime resident of Grant County, AJ has
+          dedicated 16 years to serving his community as a licensed Sheet Metal Journeyman and MM3-certified HVAC
+          specialist. His strong work ethic and skilled craftsmanship have made him an invaluable part of our team.</p>
+          <p class="mb-3 font-normal text-justify px-2 text-gray-700">AJ takes pride in helping Grant County and surrounding areas grow, one job at a time. Whether it's a
+            complex
+          HVAC installation or precision sheet metal work, he brings the expertise and dedication that comes from truly caring about the community he serves.</p>
+      </div>
+    </div>
+
+    <!-- Johnny Rowden -->
+    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm ">
+      <img class="rounded-full mx-auto p-6" src="/team/johny_rowden.png" alt="" />
+      <div class="p-5">
+        <a href="#">
+          <h5
+            class="mb-2 text-lg  mx-auto text-center font-bold tracking-tight text-gray-900">Johnathan "Johnny" Rowden</h5>
+          <h6 class="text-lg font-700 italic mx-auto text-center pb-2">Utilities Supervisor</h6>
+        </a>
+        <p class="mb-3 font-normal text-justify px-2 text-gray-700">With nine years of specialized experience, Johnathan Rowden expertly manages crews in the installation and maintenance of critical water and sewer infrastructure. As our Utilities Supervisor, he oversees the installation of water and sewer mains and service lines, as well as the installation and servicing of municipal lift stations.</p>
+        <p class="mb-3 font-normal text-justify px-2 text-gray-700">Johnathan's expertise extends to residential services, including the repair and replacement of water, sewer, and gas yard lines. His leadership ensures that every utilities project is completed efficiently and to the highest standards, keeping our community's essential infrastructure running smoothly.</p>
+      </div>
+    </div>
+
+    <!-- Allen Duran -->
+    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm ">
+      <img class="rounded-full mx-auto p-6" src="/team/allen_duran.png" alt="" />
+      <div class="p-5">
+        <a href="#">
+          <h5
+            class="mb-2 text-lg  mx-auto text-center font-bold tracking-tight text-gray-900">Allen "Kiwi" Duran</h5>
+          <h6 class="text-lg font-700 italic mx-auto text-center pb-2">Utility Worker & Head Operator</h6>
+        </a>
+        <p class="mb-3 font-normal text-justify px-2 text-gray-700">Allen "Kiwi" Duran brings 10 years of experience and a strong work ethic to our utilities team. As Head Operator, he specializes in line locating—a critical skill that ensures safe and efficient project execution. Allen is proficient in operating skid steers, backhoes, excavators, mini excavators, and vacuum trailers.</p>
+        <p class="mb-3 font-normal text-justify px-2 text-gray-700">From installing utility mains to residential service lines, Allen is dedicated to doing his best for Grant County and surrounding communities. His expertise with heavy equipment and commitment to quality workmanship make him an essential part of our team's success.</p>
+      </div>
+    </div>
+
+    <!-- Jason Solberg -->
+    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm ">
+      <img class="rounded-full mx-auto p-6" src="/team/jason_solberg.png" alt="" />
+      <div class="p-5">
+        <a href="#">
+          <h5
+            class="mb-2 text-lg  mx-auto text-center font-bold tracking-tight text-gray-900">Jason Solberg</h5>
+          <h6 class="text-lg font-700 italic mx-auto text-center pb-2">HVAC/R Technician</h6>
+        </a>
+        <p class="mb-3 font-normal text-justify px-2 text-gray-700">Jason Solberg brings 24 years of experience in the HVAC/R trade to our team. A Top Tech Graduate from RSI Trade School in Phoenix, AZ (2002), Jason has built his career on a foundation of extensive knowledge and unwavering commitment to quality.</p>
+        <p class="mb-3 font-normal text-justify px-2 text-gray-700">Known for tackling challenging problems head-on, Jason approaches every repair with the mindset of working on his own system—ensuring nothing is left to chance. He takes pride in seeing difficult jobs through to completion and delivering the level of craftsmanship that sets him apart. Jason's expertise and dedication to doing things right the first time make him an invaluable asset to both our business and the community we serve.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Photo Gallery -->
+
+  <div id="gallery" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 px-10 py-18 bg-red">
+    <!-- Item 1-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/1.png" alt="New Lift Station in Hatch, NM">
+    </div>
+    <!-- Item 2-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/2.png" alt="">
+    </div>
+    <!-- Item 3-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/3.png" alt="Ducting and Piping for new Rec Center">
+    </div>
+    <!-- Item 4-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/4.png" alt="Plumbing repair in wall">
+    </div>
+    <!-- Item 5-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/5.png" alt="Inside RTU at silver city high school">
+    </div>
+    <!-- Item 6-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/6.png" alt="Plumbing topout in Quemado, NM">
+    </div>
+    <!-- Item 7-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/7.png" alt="Sewer repair inside house">
+    </div>
+    <!-- Item 8-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/8.png" alt="Ducting at new rec center">
+    </div>
+    <!-- Item 9-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/9.png" alt="New residential heater install">
+    </div>
+    <!-- Item 10-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/10.png" alt="Bathroom remodel before pitchers in fort bayard hospital">
+    </div>
+    <!-- Item 11-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/11.png" alt="">
+    </div>
+    <!-- Item 12-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/12.png" alt="Boiler zone valve replacement">
+    </div>
+    <!-- Item 13-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/13.png" alt="Refrigeration piping at new rec center">
+    </div>
+    <!-- Item 14-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/14.png" alt="Broken pipe at waste water treatment plant ">
+    </div>
+    <!-- Item 15-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/15.png" alt="New water softener piping at ft. bayard hospital">
+    </div>
+    <!-- Item 16-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/16.png" alt="">
+    </div>
+    <!-- Item 17-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/17.png" alt="Residential sewere replacement before picture">
+    </div>
+    <!-- Item 18-->
+<!--    <div>-->
+<!--      <img class="h-auto max-w-full rounded-2xl" src="/gallery/18.png" alt="">-->
+<!--    </div>-->
+    <!-- Item 19-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/19.png" alt="New spiral duct for rec center">
+    </div>
+    <!-- Item 20-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/20.png" alt="Support anchors for underground tanks UMVFD (upper members voluneer fire dept.)">
+    </div>
+    <!-- Item 21-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/21.png" alt="">
+    </div>
+    <!-- Item 22-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/22.png" alt="Removal of mud for new lift station in hatch, nm">
+    </div>
+    <!-- Item 23-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/23.png" alt="">
+    </div>
+    <!-- Item 24-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/24.png" alt="fish hatchery glenwood">
+    </div>
+    <!-- Item 25-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/25.png" alt="broken pipe at fish hatchery">
+    </div>
+    <!-- Item 26-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/26.png" alt="Underground water storage tanks for UMVFD">
+    </div>
+    <!-- Item 27-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/27.png" alt="Underground plumbing">
+    </div>
+    <!-- Item 28-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/28.png" alt="">
+    </div>
+    <!-- Item 29-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/29.png" alt="ducting and piping at new rec center">
+    </div>
+    <!-- Item 30-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/30.png" alt="">
+    </div>
+    <!-- Item 31-->
+    <div>
+      <img class="h-auto max-w-full rounded-2xl" src="/gallery/31.png" alt="">
+    </div>
+  </div>
+
+  <!-- Services Section -->
   <section id="services">
-    <h2>Our Services</h2>
 
     <!-- container for individual service img  -->
-    <div>
-      <img src="" alt="">
-      <p>
+    <section class="bg-white">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+        <div class="max-w-screen-md mb-8 lg:mb-16">
+          <h2 class="mb-4 text-4xl tracking-tight font-heading font-extrabold text-gray-900">Services We Offer</h2>
+          <p class="text-gray-500 sm:text-xl font-body-text">
+            Since 1981, families and businesses have relied on J&S for honest, professional plumbing and HVAC services. We bring decades of expertise to every job, no matter the size or complexity.</p>
+        </div>
+        <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
+          <div>
+            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12">
+              <i class="fa-solid fa-wrench fa-2xl text-red"></i>
+            </div>
+            <h3 class="mb-2 text-xl font-heading font-bold">Maintenance and Repair</h3>
+            <p class="text-gray-500 font-body-text">We provide comprehensive maintenance and repair services for all
+              your plumbing needs, including fixtures, water heaters, and interior leak detection. Our HVAC services
+              cover heating systems, air conditioners, and evaporative coolers, ensuring year-round comfort for your
+              home or business.</p>
+          </div>
+          <div>
+            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12">
+              <i class="fa-solid fa-droplet fa-2xl text-red"></i>
+            </div>
+            <h3 class="mb-2 text-xl font-heading font-bold">Water and Sewage</h3>
+            <p class="text-gray-500 font-body-text">Our experienced technicians locate and repair leaks in water and
+              sewer lines, clear sewage stoppages, and handle complete installation of new water and sewer systems. We
+              deliver reliable solutions to keep your property's infrastructure running smoothly.</p>
+          </div>
+          <div>
+            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12">
+              <i class="fa-solid fa-temperature-high fa-2xl text-red"></i>
+            </div>
+            <h3 class="mb-2 text-xl font-heading font-bold">HVAC Seasonal Changes</h3>
 
-      </p>
-      <div>
-        <p>
-
-        </p>
+            <div id="accordion-collapse" data-accordion="collapse">
+              <h2 id="accordion-collapse-heading-1">
+                <button type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                        data-accordion-target="#accordion-collapse-body-1" aria-expanded="false"
+                        aria-controls="accordion-collapse-body-1">
+                  <span class="font-body-text font-semibold">Spring/Summer</span>
+                  <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                       xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M9 5 5 1 1 5"/>
+                  </svg>
+                </button>
+              </h2>
+              <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                  <p class="mb-2 font-body-text text-gray-500 dark:text-gray-400">We shut down your heating system and
+                    perform complete startup services for your cooling system, whether evaporative coolers or air
+                    conditioning units. </p>
+                </div>
+              </div>
+              <h2 id="accordion-collapse-heading-2">
+                <button type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border rounded-b-xl border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                        data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
+                        aria-controls="accordion-collapse-body-2">
+                  <span class="font-body-text font-semibold">Fall/Winter</span>
+                  <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                       xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M9 5 5 1 1 5"/>
+                  </svg>
+                </button>
+              </h2>
+              <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                  <p class="mb-2 text-gray-500 dark:text-gray-400">We properly shut down cooling systems with
+                    preventative maintenance to avoid freezing and leaks, then start up and service your heating system,
+                    including thorough cleaning and filter replacement.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12">
+              <i class="fa-solid fa-tape fa-2xl text-red"></i>
+            </div>
+            <h3 class="mb-2 text-xl font-heading font-bold">Custom Duct Fabrication</h3>
+            <p class="text-gray-500 font-body-text">We specialize in custom-designed ductwork for new installations in
+              both residential and commercial properties. Our sheet metal fabrication services are also available for
+              walk-in customers with specialized needs.</p>
+          </div>
+          <div>
+            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12">
+              <i class="fa-solid fa-fire fa-2xl text-red"></i>
+            </div>
+            <h3 class="mb-2 text-xl font-heading font-bold">Gas & Liquid Propane</h3>
+            <p class="text-gray-500 font-body-text">We conduct gas pressure testing for residential, commercial, and
+              mobile home properties, and provide expert leak detection and repair services to ensure your safety and
+              peace of mind.</p>
+          </div>
+          <div>
+            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12">
+              <i class="fa-solid fa-building fa-2xl text-red"></i>
+            </div>
+            <h3 class="mb-2 text-xl font-heading font-bold">Commercial HVAC</h3>
+            <p class="text-gray-500 font-body-text">Our team services and repairs commercial HVAC units of all sizes.
+              Contact us for detailed estimates on new commercial projects tailored to your business needs.</p>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div>
-      <img src="" alt="">
-      <p>
-
-      </p>
-      <div>
-        <p>
-
-        </p>
-      </div>
-    </div>
-
-    <div>
-      <img src="" alt="">
-      <p>
-
-      </p>
-      <div>
-        <p>
-
-        </p>
-      </div>
-    </div>
-
-    <div>
-      <img src="" alt="">
-      <p>
-
-      </p>
-      <div>
-        <p>
-
-        </p>
-      </div>
-    </div>
-
-    <div>
-      <img src="" alt="">
-      <p>
-
-      </p>
-      <div>
-        <p>
-
-        </p>
-      </div>
-    </div>
-
-    <div>
-      <img src="" alt="">
-      <p>
-
-      </p>
-      <div>
-        <p>
-
-        </p>
-      </div>
-    </div>
+    </section>
 
   </section>
 
-  <section id="testimonials">
-    <h2>Testimonials</h2>
-    <div>
-      <img src="" alt="">
-      <p><!-- --></p>
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+    <div class="max-w-screen-md mb-8 lg:mb-16">
+      <h2 class="mb-4 text-5xl tracking-tight font-heading font-extrabold text-gray-100">What Our Customers
+        Say</h2>
+      <p class="text-light-blue sm:text-xl font-body-text">
+
+        Our customers are our neighbors, and their satisfaction is our success. Read what local homeowners and businesses are saying about their experience with J&S.</p>
     </div>
+    <div id="reviews-section"
+         class="grid mb-8 border border-gray-200 rounded-xl md:mb-12 md:grid-cols-2 bg-white shadow-md shadow-light-blue">
+      <div
+        class="container flex flex-col items-center justify-center p-8  text-center bg-white border-b border-gray-200 rounded-t-0 md:rounded-ss-lg md:border-e">
 
+        <blockquote class="max-w-2xl mx-auto text-gray-500 ">
+          <!--<h3 class="text-lg font-semibold text-gray-900">REVIEW TITLE HERE</h3>-->
+          <div class="flex items-center justify-center ">
+            <img class="rounded-full w-9 h-9"
+                 src="/reviews/rebecca_shumway.png"
+                 alt="profile picture">
+            <div class="space-y-0.5 font-body-text font-medium text-left rtl:text-right ms-3">
+              <div>Rebecca Shumway</div>
+              <img src="" alt="Five Stars" class="text-sm text-gray-500"/>
+            </div>
+          </div>
+          <p class="my-4 font-body-text ">
+            Jason came out to my place and found the problem with my propane wall furnace yesterday. He had to take
+            apart the furnace guts to get to the problem. Thank you Jason for your determined "get 'her done"
+            attitude!!! You are the Master Furnace Fixer. My furnace is now working like a champ after a non-J&S plumber
+            looked for the problem for 8 days! I have been using J&S for the last 19 years on my own home and my
+            rentals. They are reasonably priced, can fix any plumbing & heating issue AND THE J & S STAFF ALWAYS ANSWERS
+            THE PHONE AND RETURNS YOUR CALLS.</p>
+        </blockquote>
+      </div>
+
+      <div
+        class="container flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-ss-lg md:border-e">
+
+        <blockquote class="max-w-2xl mx-auto text-gray-500">
+          <!--<h3 class="text-lg font-semibold text-gray-900">REVIEW TITLE HERE</h3>-->
+          <div class="flex items-center justify-center ">
+            <img class="rounded-full w-9 h-9"
+                 src="/reviews/courtney-jones.png"
+                 alt="profile picture">
+            <div class="space-y-0.5 font-body-text font-medium text-left rtl:text-right ms-3">
+              <div>Courtney Jones</div>
+              <img src="" alt="Five Stars" class="text-sm text-gray-500"/>
+            </div>
+          </div>
+          <p class="font-body-text my-4">
+            Louie is absolutely amazing. Him and his helper came out and fixed my issue on a short notice and solved not
+            only my main issue but helped me prevent others!! If a Plumber could wear a Super Hero cape it would be
+            Louie!!!
+          </p>
+        </blockquote>
+      </div>
+      <div
+        class="container flex flex-col items-center justify-center p-8 text-center bg-white border-b-0 border-gray-200 rounded-b-2xl md:border-e">
+
+        <blockquote class="max-w-2xl mx-auto text-gray-500">
+          <!--<h3 class="text-lg font-semibold text-gray-900">REVIEW TITLE HERE</h3>-->
+          <figcaption class="flex items-center justify-center ">
+            <img class="rounded-full w-9 h-9"
+                 src="/reviews/mark-donnell.png"
+                 alt="profile picture">
+            <div class="space-y-0.5 font-body-text font-medium text-left rtl:text-right ms-3">
+              <div>Mark Donnell</div>
+              <img src="" alt="Five Stars" class="text-sm text-gray-500"/>
+            </div>
+          </figcaption>
+          <p class="font-body-text my-4">
+            This is a good company, with nice employees, but they frequently don't answer their phones and can be very
+            difficult to contact. I wrote a very bad review for them earlier this week, but after finally getting in
+            touch with them, I am modifying it to this. They are extremely busy, but if you can reach them, they will do
+            good work.
+        </blockquote>
+      </div>
+      <div
+        class="container flex flex-col items-center justify-center p-8 text-center bg-white border-t border-gray-200 rounded-b-xl md:rounded-ss-lg md:border-e">
+
+        <blockquote class="max-w-2xl mx-auto text-gray-500">
+          <!--<h3 class="text-lg font-semibold text-gray-900">REVIEW TITLE HERE</h3>-->
+          <figcaption class="flex items-center justify-center ">
+            <img class="rounded-full w-9 h-9"
+                 src="/reviews/dave-becker.png"
+                 alt="profile picture">
+            <div class="space-y-0.5 font-body-text font-medium text-left rtl:text-right ms-3">
+              <div>Dave Becker</div>
+              <img src="" alt="Five Stars" class="text-sm text-gray-500"/>
+            </div>
+          </figcaption>
+          <p class="font-body-text my-4">J & S was able to diagnose a cracked and plugged pipe under my floor, and their
+            crew opened a hole in the concrete, dug out the dirt to reach the problem, and fixed it, in just over half a
+            day. They were willing to repour the concrete floor but I was able to do that myself. Excellent work,
+            friendly folks, fixed a problem that a previous plumber was unable to. I highly recommend J & S.</p>
+        </blockquote>
+      </div>
+    </div>
   </section>
 
-  <section id="contact">
-
+  <!-- Review CTA -->
+  <section class="border-t-2 border-b-2 border-gray-200">
+    <div class="bg-red py-8 px-4 mx-auto sm:py-16 lg:px-6">
+      <div class="mx-auto max-w-screen-sm text-center">
+        <h2 class="mb-2 text-5xl tracking-tight font-heading font-extrabold text-gray-100 pb-2">Like our
+          service?</h2>
+        <p class="text-light-blue sm:text-xl font-body-text pb-8">Leave us a review on Google letting us
+          know how we did. We welcome all feedback!</p>
+        <button type="button"
+                class="text-red bg-light-blue font-medium rounded-lg px-5 py-2.5 me-2 mb-2 border border-light-blue hover:bg-true-blue">
+          <a href="http://bit.ly/4hgb5ct"
+             class="font-body-text text-red hover:text-light-blue font-medium rounded-lg px-5 py-2.5 mr-2 mb-2 text-xl">Write
+            a Review</a></button>
+      </div>
+    </div>
   </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+    <div class="max-w-screen-md mb-4 lg:mb-16">
+      <h2 class="mb-2 text-5xl tracking-tight font-heading font-extrabold text-gray-100">Get In Touch</h2>
+      <p class="text-light-blue sm:text-xl font-body-text">
+        Questions? Need service? Want an estimate? Contact our experienced team! We're ready to assist you with all
+        your plumbing and HVAC needs.</p>
+    </div>
+    <div class="container py-12 px-8 mx-auto lg:grid lg:grid-cols-2 md:grid-cols-1 lg:gap-16">
+      <form action="https://formspree.io/f/xrbdbnav" method="POST" id="contact-form" class="max-w-2xl p-8 rounded-lg">
+        <div class="mb-6">
+          <label for="name"
+                 class="block mb-2 text-md font-body-text font-bold tracking-wider text-white ">Name
+          </label>
+          <input type="text" id="name" placeholder="First and Last Name"
+                 class="bg-gray-50 border border-gray-300 font-body-text text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <span id="name-error" class="error-message"></span>
+        </div>
+
+        <div class="mb-6">
+          <label for="email" class="block mb-2 text-md font-body-text font-bold tracking-wider text-white ">Email</label>
+          <input type="text" id="email" placeholder="Email Address"
+                 class="bg-gray-50 border border-gray-300 font-body-text text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <span id="email-error" class="error-message"></span>
+        </div>
+
+        <div class="mb-6">
+          <label for="phone" class="block mb-2 text-md font-body-text font-bold tracking-wider text-white ">Phone
+            number</label>
+          <input type="text" id="phone" aria-describedby="helper-text-explanation"
+                 class="bg-gray-50 border border-gray-300 font-body-text text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full  p-2.5"
+                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"/>
+        </div>
+
+        <div class="mb-6">
+          <label for="message"
+                 class="block mb-2 text-md font-body-text font-bold tracking-wider text-white">
+            Message</label>
+          <textarea id="message" rows="4"
+                    class="block p-2.5 w-full font-body-text text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Write your thoughts here..."></textarea>
+          <span id="message-error" class="error-message"></span>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <button type="submit"
+                  class="mt-4 text-light-blue bg-red font-body-text font-semibold rounded-lg text-md px-5 py-2.5 mr-2 mb-2border-navy border-2 hover:bg-light-blue hover:text-red">
+            Submit
+          </button>
+        </div>
+      </form>
+
+      <div class="container mx-auto bg-light-blue rounded-xl px-12 py-8 flex flex-col justify-center items-center">
+        <div class="flex items-baseline justify-center gap-2">
+        <i class="fa-solid fa-location-dot fa-xl py-2"></i>
+          <h5 class="mb-3 text-2xl font-semibold font-heading tracking-tight text-gray-900">Find Us</h5>
+        </div>
+          <address class="mb-2 font-normal text-true-blue text-center font-body-text"><a href="http://bit.ly/46Yoxyn" target="_blank">2815
+            Pinos Altos Rd, Silver City, NM
+            88061</a></address>
+        <hr class="h-px my-8 border-1 border-red w-3/4 mx-auto"/>
+
+        <div class="flex items-baseline justify-center gap-2">
+          <i class="fa-solid fa-store fa-xl py-2"></i>
+          <h5 class="mb-3 text-2xl font-heading font-semibold tracking-tight text-gray-900">Visit Us</h5>
+        </div>
+        <ul>
+          <li class="font-body-text"><span class="font-bold">Monday - Friday:</span> &nbsp;7am - 5pm</li>
+          <li class="font-body-text"><span class="font-bold">Saturday - Sunday:</span> &nbsp;Closed</li>
+        </ul>
+        <hr class="h-px my-8 border-1 border-red w-3/4 mx-auto"/>
+
+        <div class="flex items-baseline justify-center gap-2">
+          <i class="fa-solid fa-phone fa-xl py-2"></i>
+          <h5 class="mb-3 text-2xl font-heading font-semibold tracking-tight text-gray-900">Call Us</h5>
+        </div>
+        <a href="tel:575-538-2973" class="text-true-blue font-normal font-semibold">
+          Phone: 575-538-2973
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-black px-8 py-6">
+    <div class="bg-light-blue rounded-lg shadow-sm m-4">
+      <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="grid grid-cols-2 md:grid-cols-1">
+          <a href="/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+            <img src="/assets/logo-v4.png" class="h-8" alt="J&S Plumbing and Heating Logo"/>
+            <span class="self-center text-2xl text-navy font-title font-semibold whitespace-nowrap">J&S Plumbing and
+            Heating</span>
+          </a>
+          <ul
+            class="grid grid-cols-4 md:pt-8 mb-6 text-sm font-body-text font-medium text-gray-500 sm:mb-0">
+            <li>
+              <a href="#about" class="hover:underline me-4 md:me-6 text-gray">About</a>
+            </li>
+            <li class="hover:underline me-4 md:me-6 text-gray">
+<!--              <a href="#" class="hover:underline me-4 md:me-6 text-gray">Privacy Policy</a>-->
+              <!-- Modal toggle -->
+              <a data-modal-target="default-modal" data-modal-toggle="default-modal"
+                 class="hover:underline me-4 md:me-6 text-gray"
+                 type="button">
+                Privacy Policy
+              </a>
+
+              <!-- Main modal -->
+              <div id="default-modal" tabindex="-1" aria-hidden="true"
+                   class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full ">
+                <div class="relative p-4 w-full max-w-2xl max-h-full rounded-lg ">
+                  <!-- Modal content -->
+                  <div class="relative bg-light-blue border border-default rounded-xl shadow-sm p-4 md:p-6">
+                    <!-- Modal header -->
+                    <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
+                      <h3 class="text-lg font-medium text-heading">
+                        Privacy Policy
+                      </h3>
+                      <button type="button" class="text-body  hover:bg-neutral-tertiary hover:text-heading rounded-base text-sm w-9 h-9 ms-auto inline-flex justify-center items-center" data-modal-hide="default-modal">
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
+                        <span class="sr-only">Close modal</span>
+                      </button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="space-y-4 md:space-y-6 py-4 md:py-6">
+                      <h4 class="font-bold text-red text-lg">Introduction</h4>
+                      <p class="leading-relaxed text-body">
+                        J&S Plumbing and Heating ("we," "our," or "us") respects your privacy. This Privacy Policy explains how we collect,
+                        use, and protect your information when you visit our website <a href="https:jandsplumbingheating.com">jandsplumbingheating.com</a>
+                        and submit
+                        inquiries through our contact
+                        form.
+                      </p>
+
+                      <h4 class="font-bold text-red text-lg">Information We Collect</h4>
+                      <h5 class="font-bold italic text-md text-red">Contact Form Information</h5>
+                      <p class="leading-relaxed text-body">
+                        When you submit our contact form, we collect:
+                        <ul class="list-disc mx-6">
+                      <li>Name</li>
+                      <li>Email address</li>
+                      <li>Phone number if one is provided</li>
+                      <li>Any message or information you choose to provide about your plumbing needs</li>
+                        </ul>
+                      </p>
+
+                      <h5 class="font-bold italic text-md text-red">Automatically Collected Information</h5>
+                      <p>When you visit our website, we may automatically collect basic technical information such as:
+                        <ul class="list-disc mx-6">
+                          <li>IP address</li>
+                          <li>Browser type</li>
+                          <li>Device type</li>
+                        </ul>
+                      </p>
+                      <p>This website is informational only and does not use cookies or tracking technologies.
+                      </p>
+
+                      <h4 class="font-bold text-red text-lg">How We Use Your Information</h4>
+                      <p>We use the information you provide to:
+                        <ul class="list-disc mx-6">
+                          <li>Respond to your service inquiries</li>
+                          <li>Contact you about your plumbing needs</li>
+                          <li>Provide quotes and schedule services</li>
+                          <li>Maintain records of customer communication</li>
+                        </ul>
+                      </p>
+                      <p>We do not use your information for marketing purposes unless you specifically request to receive updates from us.
+                      </p>
+
+                      <h4 class="font-bold text-red text-lg">How We Protect Your Information</h4>
+                      <p>We implement reasonable security measures to protect your information from unauthorized access or disclosure. However, no method of internet transmission is completely secure, and we cannot guarantee absolute security.
+                      </p>
+
+                      <h4 class="font-bold text-red text-lg">Sharing Your Information</h4>
+                      <p>We do not sell, rent, or trade your personal information. We may share your information only in the following circumstances:
+                        <ul class="list-disc mx-6">
+                          <li>**Legal Requirements:** When required by law or to respond to legal process</li>
+                          <li>**Service Providers:** With trusted vendors who help us operate our website (such as web hosting services), who are obligated to keep your information confidential</li>
+                        </ul>
+                      </p>
+
+                      <h4 class="font-bold text-red text-lg">Data Retention</h4>
+                      <p>We retain your contact information only as long as necessary to respond to your inquiry and provide services. You may request deletion of your information at any time by contacting us.
+                      </p>
+
+                      <h4 class="font-bold text-red text-lg">Your Rights</h4>
+                      You have the right to:
+                      <ul class="list-disc mx-6">
+                        <li>Request a copy of the information we have about you
+                        </li>
+                        <li>Request correction of any inaccurate information
+                        </li>
+                        <li>Request deletion of your information
+                        </li>
+                        <li>Opt-out of any future communications
+                        </li>
+                      </ul>
+                      <p>To exercise these rights, please contact us using the information below.
+                      </p>
+
+                      <h4 class="font-bold text-red text-lg">Children's Policy</h4>
+                      <p>Our services are not directed to individuals under 18 years of age. We do not knowingly collect information from children.
+                      </p>
+
+                      <h4 class="font-bold text-red text-lg">Changes to This Privacy Policy</h4>
+                      <p>We may update this Privacy Policy from time to time. The "Last Updated" date at the top indicates when changes were last made. Continued use of our website after changes constitutes acceptance of the updated policy.
+                      </p>
+
+                      <h4 class="font-bold text-red text-lg">Contact Us</h4>
+                      <p>If you have questions about this Privacy Policy or wish to exercise your privacy rights,
+                          please contact us:</p>
+                      <address>
+                        <h5 class="font-bold">J&S Plumbing and Heating</h5>
+                        2815 Pinos Altos Rd<br />
+                        Silver City, New Mexico 88061<br /><br />
+
+                        <a href="tel:575-538-2973" class="text-true-blue">
+                          Phone: 575-538-2973
+                        </a><br />
+                        <a href="mailto:jandsplumbinghtg@gmail.com" class="text-true-blue">Email: jandsplumbinghtg@gmail
+                          .com</a>
+                      </address>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <p class="italic">By using our website and submitting our contact form, you acknowledge that you
+                      have read
+                      and understood this Privacy Policy.</p>
+                  </div>
+                </div>
+              </div>
+
+            </li>
+            <li>
+              <a href="#" class="hover:underline me-4 md:me-6 text-gray">Licensing</a>
+            </li>
+            <li>
+              <a href="#" class="hover:underline text-gray">Attribution</a>
+            </li>
+          </ul>
+        </div>
+        <hr class="mb-6 mt-2 border-navy sm:mx-auto"/>
+        <span class="block font-body-text text-sm text-gray sm:text-center">&copy; 2025 <a href="/"
+                                                                                          class="hover:underline">J&S
+          Plumbing and Heating, LLC™</a>. All Rights Reserved.</span>
+      </div>
+    </div>
+  </footer>
+  <!-- Attributions -->
+  <!--<a href="https://www.flaticon.com/free-icons/star" title="star icons">Star icons created by Pixel perfect -
+  Flaticon</a>
+  <a href="https://www.flaticon.com/free-icons/star" title="star icons">Star icons created by Pixel perfect - Flaticon</a>
+  <a href="https://www.vecteezy.com/free-vector/african-pattern">African Pattern Vectors by Vecteezy</a>-->
 </main>
 <script type="module" src="/src/main.js"></script>
 </body>

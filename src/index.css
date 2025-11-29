@@ -2,3 +2,24 @@
 @import "flowbite/src/themes/default.css";
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
+
+@theme {
+  /* Colors */
+  --color-true-blue: #2B5AA0;
+  --color-red: #C41E3A;
+  --color-white: #FFFFFF;
+
+  --color-gray: #6B6B6B;
+  --color-navy: #1A3B5C;
+  --color-light-blue: #E8F4FD;
+
+  /* Fonts */
+  --font-title: "nexa-rust-slab-black-shad-2", sans-serif;
+  --font-heading: "nexa-text", sans-serif;
+  --font-body-text: "poppins", sans-serif;
+}
+
+.error-message {
+  color: red;
+
+}
