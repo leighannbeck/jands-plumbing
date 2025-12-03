@@ -1,0 +1,28 @@
+name: Deploy via SSH
+'on':
+  - push
+  - repository_dispatch
+permissions:
+  actions: read
+  contents: read
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      # Make sure the @v0.9.0 matches the current version of the action
+      - uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.PRIVATE_KEY }}
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Vite site
+        run: npm run build
+
+      - name: Deploy to server
+        run: |
+          ssh-keyscan -H jandsplumbingheating.com >> ~/.ssh/known_hosts 
+          scp -r ./dist/* lwalker32@jandsplumbingheating.com:/var/www/jandsplumbingheating.com/html
