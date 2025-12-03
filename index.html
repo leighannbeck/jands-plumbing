@@ -22,54 +22,118 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 </head>
-<body class="bg-true-blue">
+<body class="bg-true-blue max-w-full overflow-x-hidden">
 
 <!-- Top Nav Bar -->
 
-<nav class="bg-light-blue fixed w-full z-20 top-0 start-0 border-b-3 border-red">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="/assets/logo-v4.png" class="h-7" alt="J&S Heating and Plumbing Logo">
+
+<nav class="bg-light-blue fixed w-full z-20 top-0 left-0 right-0 border-b-3 border-red">
+  <div class="flex flex-wrap items-center justify-between mx-auto p-4 max-w-full">
+    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse min-w-0">
+      <img src="/assets/logo-v4.png" class="h-7 shrink-0" alt="J&S Heating and Plumbing Logo">
       <span
         class="hidden md:inline-block self-center text-2xl text-heading font-semibold whitespace-nowrap font-title text-navy">J&S
         Heating and
         Plumbing</span>
     </a>
-    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+    <div class="flex md:order-2 gap-2 md:gap-0 rtl:space-x-reverse">
       <button type="button"
-              class="text-light-blue bg-navy rounded-lg hover:bg-true-blue box-border focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">
+              class="text-light-blue bg-navy rounded-lg md:hover:bg-true-blue box-border focus:ring-4 focus:ring-brand-medium shadow-xs font-medium font-body-text leading-5 rounded-base text-sm px-2 py-0 md:text-lg md:px-3 md:py-3 focus:outline-none">
         <a href="#contact">Contact Us</a>
       </button>
       <button data-collapse-toggle="navbar-sticky" type="button"
-              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm font-body-text rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary" aria-controls="navbar-sticky" aria-expanded="false">
+              class="inline-flex items-center p-2 w-12 h-12 justify-center text-lg font-body-text rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary" aria-controls="navbar-sticky" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
-        <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
+        <svg class="w-9 h-9" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+             viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
       </button>
     </div>
     <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-default rounded-base bg-neutral-secondary-soft md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-neutral-primary">
+      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium  rounded-base bg-neutral-secondary-soft md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-neutral-primary">
         <li>
-          <a href="/" class="block py-2 px-3 text-navy font-body-text text-xl rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent md:hover:font-semibold">Home</a>
+          <a href="/"
+             class="block py-2 px-3 text-navy font-body-text text-lg rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent md:hover:font-semibold">Home</a>
         </li>
         <li>
-          <a href="#about" class="block py-2 px-3 text-navy font-body-text text-xl rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent md:hover:font-semibold">About</a>
+          <button id="dropdownNavbarButton" data-dropdown-toggle="dropdownNavbar"
+                  class="flex items-center justify-between w-full py-2 px-3 text-navy font-body-text text-lg rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent md:hover:font-semibold">
+<!--            class="py-2 px-3 text-navy font-body-text text-xl rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent md:hover:font-semibold"-->
+            About
+            <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
+          </button>
+          <!-- Dropdown menu -->
+          <div id="dropdownNavbar" class="z-10 hidden bg-navy rounded-base rounded-lg shadow-lg w-44">
+            <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownNavbarButton">
+              <li>
+              <a href="#about"
+                 class="block py-2 px-3 text-light-blue font-body-text text-md rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent md:hover:font-semibold">About</a>
+              </li>
+              <li>
+                <a href="#"
+                   class="block py-2 px-3 text-light-blue font-body-text text-md rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent md:hover:font-semibold">Our Team</a>
+              </li>
+              <li>
+                <a href="#services"
+                   class="block py-2 px-3 text-light-blue font-body-text text-md rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent md:hover:font-semibold">Our Services</a>
+              </li>
+
+
+            </ul>
+          </div>
         </li>
         <li>
-          <a href="#" class="block py-2 px-3 text-navy font-body-text text-xl rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent md:hover:font-semibold">Our Team</a>
-        </li>
-        <li>
-          <a href="#gallery" class="block py-2 px-3 text-navy font-body-text text-xl rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent md:hover:font-semibold">Gallery</a>
-        </li>
-        <li>
-          <a href="#services" class="block py-2 px-3 text-navy font-body-text text-xl rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent md:hover:font-semibold">Services</a>
-        </li>
-        <li>
-          <a href="#testimonials" class="block py-2 px-3 text-navy font-body-text text-xl rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent md:hover:font-semibold">Testimonials</a>
-        </li>
+        <a href="#testimonials"
+           class="block py-2 px-3 text-navy font-body-text text-lg rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent md:hover:font-semibold">Testimonials</a>
       </ul>
     </div>
   </div>
 </nav>
+
+
+<!--<nav class="bg-light-blue fixed w-full z-20 top-0 start-0 border-b-3 border-red">-->
+<!--  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">-->
+<!--    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">-->
+<!--      <img src="/assets/logo-v4.png" class="h-7" alt="J&S Heating and Plumbing Logo">-->
+<!--      <span-->
+<!--        class="hidden md:inline-block self-center text-2xl text-heading font-semibold whitespace-nowrap font-title text-navy">J&S-->
+<!--        Heating and-->
+<!--        Plumbing</span>-->
+<!--    </a>-->
+<!--    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">-->
+<!--      <button type="button"-->
+<!--              class="text-light-blue bg-navy rounded-lg hover:bg-true-blue box-border focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">-->
+<!--        <a href="#contact">Contact Us</a>-->
+<!--      </button>-->
+<!--      <button data-collapse-toggle="navbar-sticky" type="button"-->
+<!--              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm font-body-text rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary" aria-controls="navbar-sticky" aria-expanded="false">-->
+<!--        <span class="sr-only">Open main menu</span>-->
+<!--        <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>-->
+<!--      </button>-->
+<!--    </div>-->
+<!--    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">-->
+<!--      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-default rounded-base bg-neutral-secondary-soft md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-neutral-primary">-->
+<!--        <li>-->
+<!--          <a href="/" class="block py-2 px-3 text-navy font-body-text text-xl rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent md:hover:font-semibold">Home</a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a href="#about" class="block py-2 px-3 text-navy font-body-text text-xl rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent md:hover:font-semibold">About</a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a href="#" class="block py-2 px-3 text-navy font-body-text text-xl rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent md:hover:font-semibold">Our Team</a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a href="#gallery" class="block py-2 px-3 text-navy font-body-text text-xl rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent md:hover:font-semibold">Gallery</a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a href="#services" class="block py-2 px-3 text-navy font-body-text text-xl rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent md:hover:font-semibold">Services</a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a href="#testimonials" class="block py-2 px-3 text-navy font-body-text text-xl rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent md:hover:font-semibold">Testimonials</a>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</nav>-->
 
 
 <!--<nav class="bg-navy border-gray-200">-->
@@ -139,12 +203,12 @@
   </section>
 
   <!-- Mini Service Preview Section -->
-  <section class="grid gap-8 lg:grid-cols-3 md:grid-cols-1 p-8 bg-red">
+  <section class="grid gap-8 lg:grid-cols-3 my-4 md:grid-cols-1 md:p-8 bg-red">
 
     <!-- mini services card  -->
 
     <a href="#"
-       class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100">
+       class="flex flex-col items-center bg-white border border-gray-200 md:rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100">
       <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
            src="/graphics/plumbing.png" alt="">
       <div class="flex flex-col justify-between p-4 leading-normal">
@@ -153,14 +217,14 @@
           Solutions Since
           1981
         <p class="mb-3 font-body-text font-normal text-gray-700">Quality plumbing service backed by over 40 years of
-        experience.
-          .</p>
+          experience.
+          </p>
       </div>
     </a>
 
     <!-- mini services card  -->
     <a href="#"
-       class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100">
+       class="flex flex-col items-center bg-white border border-gray-200 md:rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100">
       <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
            src="/graphics/hvac.png" alt="">
       <div class="flex flex-col justify-between p-4 leading-normal">
@@ -174,7 +238,7 @@
 
     <!-- mini services card  -->
     <a href="#"
-       class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100">
+       class="flex flex-col items-center bg-white border border-gray-200 md:rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100">
       <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
            src="/graphics/sewage.png" alt="">
       <div class="flex flex-col justify-between p-4 leading-normal">
@@ -190,9 +254,9 @@
 
   <!-- About Us Section -->
   <section id="about">
-    <section class="bg-white ">
+    <section class="bg-white py-4 ">
       <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-        <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+        <div class="font-light text-gray-500 sm:text-lg px-2">
           <h2 class="mb-4 text-4xl tracking-tight font-heading font-extrabold text-gray-900">It's
             all in the family</h2>
           <p class="mb-4">J&S Plumbing and Heating has been serving the community since 1981, when Jerry Beck acquired
@@ -202,9 +266,9 @@
             ensuring the same commitment to quality service for generations to come.</p>
         </div>
         <div class="grid grid-cols-1 gap-4 mt-8">
-          <img class="mt-4 w-3/4 lg:mt-10 rounded-lg"
+          <img class="mt-4 w-3/4 mx-auto lg:mt-10 rounded-lg"
                src="/becks.png"
-               alt="office content 2">
+               alt="Picture of J&S Plumbing and Heating's founder, Jerry and Sue Beck, with their son and current owner, Matt Beck">
         </div>
       </div>
     </section>
@@ -212,7 +276,7 @@
     <section class="bg-white dark:bg-gray-900">
       <div
         class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6" dir="rtl">
-        <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+        <div class="font-light text-gray-500 sm:text-lg px-3">
           <blockquote class="text-xl italic font-semibold text-gray-900 dark:text-white">
             <svg class="w-8 h-8 text-gray-400 dark:text-gray-600 mb-4" aria-hidden="true"
                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
@@ -223,7 +287,7 @@
               work, and now their son, Matt continues the tradition. Matt has certainly received a strong
               background in the business. After all, he was raised in it... from the bassinette! Sue would
               bring him to work with her and later he rode in the truck with Dad. He began helping on the job
-            when he was old enough to handle a shovel and he worked summers in the field through high school
+              when he was old enough to handle a shovel and he worked summers in the field through high school
               and college.</quote></p><br />
             <p class="font-medium">Excerpt from <span class="italic">"Silver City Life
               Magazine"</span>,
@@ -241,11 +305,11 @@
   </section>
 
   <!-- Team Section -->
-  <section class="grid lg:grid-cols-4 gap-12 p-12 justify-center">
+  <section class="grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 md:p-6 my-4 justify-center">
 
     <!-- Chris Albers -->
-    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm ">
-        <img class="rounded-full mx-auto p-6" src="/team/chris_albers.png" alt="" />
+    <div class="max-w-sm bg-white border border-gray-200 md:rounded-lg shadow-sm mb-2">
+      <img class="rounded-full mx-auto p-6" src="/team/chris_albers.png" alt="" />
       <div class="p-5">
         <a href="#">
           <h5
@@ -259,14 +323,14 @@
           both expertise and efficiency to every job. As our Safety Coordinator and Lead Service Technician, he's
           dedicated to solving even the most challenging plumbing issues while ensuring every project meets the
           highest safety standards.</p>
-          <p class="mb-3 font-normal text-justify px-2 text-gray-700">Chris's commitment to excellence extends beyond the worksite. He's deeply involved in the community
-        as a
+        <p class="mb-3 font-normal text-justify px-2 text-gray-700">Chris's commitment to excellence extends beyond the worksite. He's deeply involved in the community
+          as a
           youth soccer coach, currently serving as Head Boys Soccer Coach at Silver High School and Safety Director for AYSO 309. His dedication to mentoring young athletes reflects the same care and attention to detail he brings to serving our customers.</p>
       </div>
     </div>
 
     <!-- AJ Kirker -->
-    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm ">
+    <div class="max-w-sm bg-white border border-gray-200 md:rounded-lg shadow-sm mb-2">
       <img class="rounded-full mx-auto p-6" src="/team/aj_kirker.png" alt="" />
       <div class="p-5">
         <a href="#">
@@ -277,14 +341,14 @@
         <p class="mb-3 font-normal text-justify px-2 text-gray-700">A lifetime resident of Grant County, AJ has
           dedicated 16 years to serving his community as a licensed Sheet Metal Journeyman and MM3-certified HVAC
           specialist. His strong work ethic and skilled craftsmanship have made him an invaluable part of our team.</p>
-          <p class="mb-3 font-normal text-justify px-2 text-gray-700">AJ takes pride in helping Grant County and surrounding areas grow, one job at a time. Whether it's a
-            complex
+        <p class="mb-3 font-normal text-justify px-2 text-gray-700">AJ takes pride in helping Grant County and surrounding areas grow, one job at a time. Whether it's a
+          complex
           HVAC installation or precision sheet metal work, he brings the expertise and dedication that comes from truly caring about the community he serves.</p>
       </div>
     </div>
 
     <!-- Johnny Rowden -->
-    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm ">
+    <div class="max-w-sm bg-white border border-gray-200 md:rounded-lg shadow-sm mb-2">
       <img class="rounded-full mx-auto p-6" src="/team/johny_rowden.png" alt="" />
       <div class="p-5">
         <a href="#">
@@ -298,7 +362,7 @@
     </div>
 
     <!-- Allen Duran -->
-    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm ">
+    <div class="max-w-sm bg-white border border-gray-200 md:rounded-lg shadow-sm mb-2">
       <img class="rounded-full mx-auto p-6" src="/team/allen_duran.png" alt="" />
       <div class="p-5">
         <a href="#">
@@ -312,7 +376,7 @@
     </div>
 
     <!-- Jason Solberg -->
-    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm ">
+    <div class="max-w-sm bg-white border border-gray-200 md:rounded-lg shadow-sm mb-2">
       <img class="rounded-full mx-auto p-6" src="/team/jason_solberg.png" alt="" />
       <div class="p-5">
         <a href="#">
@@ -328,133 +392,392 @@
   </section>
 
   <!-- Photo Gallery -->
+<!--  <section class="pb-2 md:pt-14 md:pb-10 md:mt-10 bg-red">-->
+<!--    <div id="gallery" class="w-full max-w-screen-lg lg:max-w-5xl md:mx-auto mx-auto...">-->
+<!--      &lt;!&ndash; Slider Container &ndash;&gt;-->
+<!--      <div class="overflow-hidden">-->
+<!--        <div id="slider"-->
+<!--             class="flex transition-transform duration-700 ease-in-out touch-pan-x snap-x md:snap-mandatory md:-mx-4">-->
 
-  <div id="gallery" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 px-10 py-18 bg-red">
-    <!-- Item 1-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/1.png" alt="New Lift Station in Hatch, NM">
-    </div>
-    <!-- Item 2-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/2.png" alt="">
-    </div>
-    <!-- Item 3-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/3.png" alt="Ducting and Piping for new Rec Center">
-    </div>
-    <!-- Item 4-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/4.png" alt="Plumbing repair in wall">
-    </div>
-    <!-- Item 5-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/5.png" alt="Inside RTU at silver city high school">
-    </div>
-    <!-- Item 6-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/6.png" alt="Plumbing topout in Quemado, NM">
-    </div>
-    <!-- Item 7-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/7.png" alt="Sewer repair inside house">
-    </div>
-    <!-- Item 8-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/8.png" alt="Ducting at new rec center">
-    </div>
-    <!-- Item 9-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/9.png" alt="New residential heater install">
-    </div>
-    <!-- Item 10-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/10.png" alt="Bathroom remodel before pitchers in fort bayard hospital">
-    </div>
-    <!-- Item 11-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/11.png" alt="">
-    </div>
-    <!-- Item 12-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/12.png" alt="Boiler zone valve replacement">
-    </div>
-    <!-- Item 13-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/13.png" alt="Refrigeration piping at new rec center">
-    </div>
-    <!-- Item 14-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/14.png" alt="Broken pipe at waste water treatment plant ">
-    </div>
-    <!-- Item 15-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/15.png" alt="New water softener piping at ft. bayard hospital">
-    </div>
-    <!-- Item 16-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/16.png" alt="">
-    </div>
-    <!-- Item 17-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/17.png" alt="Residential sewere replacement before picture">
-    </div>
-    <!-- Item 18-->
-<!--    <div>-->
-<!--      <img class="h-auto max-w-full rounded-2xl" src="/gallery/18.png" alt="">-->
-<!--    </div>-->
-    <!-- Item 19-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/19.png" alt="New spiral duct for rec center">
-    </div>
-    <!-- Item 20-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/20.png" alt="Support anchors for underground tanks UMVFD (upper members voluneer fire dept.)">
-    </div>
-    <!-- Item 21-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/21.png" alt="">
-    </div>
-    <!-- Item 22-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/22.png" alt="Removal of mud for new lift station in hatch, nm">
-    </div>
-    <!-- Item 23-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/23.png" alt="">
-    </div>
-    <!-- Item 24-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/24.png" alt="fish hatchery glenwood">
-    </div>
-    <!-- Item 25-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/25.png" alt="broken pipe at fish hatchery">
-    </div>
-    <!-- Item 26-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/26.png" alt="Underground water storage tanks for UMVFD">
-    </div>
-    <!-- Item 27-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/27.png" alt="Underground plumbing">
-    </div>
-    <!-- Item 28-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/28.png" alt="">
-    </div>
-    <!-- Item 29-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/29.png" alt="ducting and piping at new rec center">
-    </div>
-    <!-- Item 30-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/30.png" alt="">
-    </div>
-    <!-- Item 31-->
-    <div>
-      <img class="h-auto max-w-full rounded-2xl" src="/gallery/31.png" alt="">
-    </div>
-  </div>
+<!--          &lt;!&ndash; Slide 1 &ndash;&gt;-->
+<!--          <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--            <div class="relative w-full pb-[56.25%]">-->
+<!--              <img src="/gallery/1.png" alt="New Lift Station in Hatch, NM"-->
+<!--                   class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--            </div>-->
+<!--            <div class="my-2 md:my-4 text-center px-4">-->
+<!--              <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">New Lift Station in Hatch, NM</h3>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Slide 2 &ndash;&gt;-->
+<!--          <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--            <div class="relative w-full pb-[56.25%]">-->
+<!--              <img src="/gallery/2.png" alt="New Lift Station in Hatch, NM"-->
+<!--                   class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--            </div>-->
+<!--            <div class="my-2 md:my-4 text-center px-4">-->
+<!--              <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">New Lift Station in Hatch, NM</h3>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Slide 3 &ndash;&gt;-->
+<!--          <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--            <div class="relative w-full pb-[56.25%]">-->
+<!--              <img src="/gallery/3.png" alt="Ducting and Piping for new Rec Center"-->
+<!--                   class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--            </div>-->
+<!--            <div class="my-2 md:my-4 text-center px-4">-->
+<!--              <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">Ducting and Piping for new Rec Center</h3>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Slide 4 &ndash;&gt;-->
+<!--          <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--            <div class="relative w-full pb-[56.25%]">-->
+<!--              <img src="/gallery/4.png" alt="Plumbing repair in wall"-->
+<!--                   class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--            </div>-->
+<!--            <div class="my-2 md:my-4 text-center px-4">-->
+<!--              <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">Plumbing repair in wall</h3>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Slide 5 &ndash;&gt;-->
+<!--          <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--            <div class="relative w-full pb-[56.25%]">-->
+<!--              <img src="/gallery/5.png" alt="Inside RTU at Silver City High School"-->
+<!--                   class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--            </div>-->
+<!--            <div class="my-2 md:my-4 text-center px-4">-->
+<!--              <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">Inside RTU at Silver City High School</h3>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Slide 6 &ndash;&gt;-->
+<!--          <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--            <div class="relative w-full pb-[56.25%]">-->
+<!--              <img src="/gallery/6.png" alt="Plumbing topout in Quemado, NM"-->
+<!--                   class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--            </div>-->
+<!--            <div class="my-2 md:my-4 text-center px-4">-->
+<!--              <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">Plumbing topout in Quemado, NM</h3>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Slide 7 &ndash;&gt;-->
+<!--          <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--            <div class="relative w-full pb-[56.25%]">-->
+<!--              <img src="/gallery/7.png" alt="Sewer repair inside house"-->
+<!--                   class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--            </div>-->
+<!--            <div class="my-2 md:my-4 text-center px-4">-->
+<!--              <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">Sewer repair inside house</h3>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Slide 8 &ndash;&gt;-->
+<!--          <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--            <div class="relative w-full pb-[56.25%]">-->
+<!--              <img src="/gallery/8.png" alt="Ducting at new Rec Center"-->
+<!--                   class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--            </div>-->
+<!--            <div class="my-2 md:my-4 text-center px-4">-->
+<!--              <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">Ducting at new Rec Center</h3>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Slide 9 &ndash;&gt;-->
+<!--          <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--            <div class="relative w-full pb-[56.25%]">-->
+<!--              <img src="/gallery/9.png" alt="New residential heater install"-->
+<!--                   class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--            </div>-->
+<!--            <div class="my-2 md:my-4 text-center px-4">-->
+<!--              <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">New residential heater install</h3>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Slide 10 &ndash;&gt;-->
+<!--          <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--            <div class="relative w-full pb-[56.25%]">-->
+<!--              <img src="/gallery/10.png" alt="Bathroom remodel before pitchers in Fort Bayard Hospital"-->
+<!--                   class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--            </div>-->
+<!--            <div class="my-2 md:my-4 text-center px-4">-->
+<!--              <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">Bathroom remodel before pitchers in Fort Bayard Hospital</h3>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Slide 11 &ndash;&gt;-->
+<!--          <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--            <div class="relative w-full pb-[56.25%]">-->
+<!--              <img src="/gallery/11.png" alt="Bathroom remodel before pitchers in Fort Bayard Hospital"-->
+<!--                   class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--            </div>-->
+<!--            <div class="my-2 md:my-4 text-center px-4">-->
+<!--              <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">Bathroom remodel before pitchers in Fort Bayard Hospital</h3>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Slide 12 &ndash;&gt;-->
+<!--          <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--            <div class="relative w-full pb-[56.25%]">-->
+<!--              <img src="/gallery/12.png" alt="Boiler zone valve replacement"-->
+<!--                   class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--            </div>-->
+<!--            <div class="my-2 md:my-4 text-center px-4">-->
+<!--              <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">Boiler zone valve replacement</h3>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Slide 13 &ndash;&gt;-->
+<!--          <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--            <div class="relative w-full pb-[56.25%]">-->
+<!--              <img src="/gallery/13.png" alt="Refrigeration piping at new Rec Center"-->
+<!--                   class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--            </div>-->
+<!--            <div class="my-2 md:my-4 text-center px-4">-->
+<!--              <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">Refrigeration piping at new Rec Center</h3>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Slide 14 &ndash;&gt;-->
+<!--          <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--            <div class="relative w-full pb-[56.25%]">-->
+<!--              <img src="/gallery/14.png" alt="Broken pipe at waste water treatment plant"-->
+<!--                   class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--            </div>-->
+<!--            <div class="my-2 md:my-4 text-center px-4">-->
+<!--              <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">Broken pipe at waste water treatment plant</h3>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Slide 15 &ndash;&gt;-->
+<!--          <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--            <div class="relative w-full pb-[56.25%]">-->
+<!--              <img src="/gallery/15.png" alt="New water softener piping at Fort Bayard Hospital"-->
+<!--                   class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--            </div>-->
+<!--            <div class="my-2 md:my-4 text-center px-4">-->
+<!--              <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">New water softener piping at Fort Bayard Hospital</h3>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Slide 16 &ndash;&gt;-->
+<!--          <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--            <div class="relative w-full pb-[56.25%]">-->
+<!--              <img src="/gallery/16.png" alt="New water softener piping at Fort Bayard Hospital (with crew)"-->
+<!--                   class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--            </div>-->
+<!--            <div class="my-2 md:my-4 text-center px-4">-->
+<!--              <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">New water softener piping at Fort Bayard Hospital (with crew)</h3>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Slide 17 &ndash;&gt;-->
+<!--          <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--            <div class="relative w-full pb-[56.25%]">-->
+<!--              <img src="/gallery/17.png" alt="Residential sewer replacement (before image)"-->
+<!--                   class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--            </div>-->
+<!--            <div class="my-2 md:my-4 text-center px-4">-->
+<!--              <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">Residential sewer replacement (before image)</h3>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Slide 18 &ndash;&gt;-->
+<!--          <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--            <div class="relative w-full pb-[56.25%]">-->
+<!--              <img src="/gallery/18.png" alt="none"-->
+<!--                   class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--            </div>-->
+<!--            <div class="my-2 md:my-4 text-center px-4">-->
+<!--              <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">none</h3>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--            &lt;!&ndash; Slide 19 &ndash;&gt;-->
+<!--            <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--              <div class="relative w-full pb-[56.25%]">-->
+<!--                <img src="/gallery/19.png" alt="New spiral duct for new Rec Center"-->
+<!--                     class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--              </div>-->
+<!--              <div class="my-2 md:my-4 text-center px-4">-->
+<!--                <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">New spiral duct for new Rec Center</h3>-->
+<!--              </div>-->
+<!--            </div>-->
+
+<!--              &lt;!&ndash; Slide 20 &ndash;&gt;-->
+<!--              <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--                <div class="relative w-full pb-[56.25%]">-->
+<!--                  <img src="/gallery/20.png.png"-->
+<!--                       alt="Support anchors for underground tanks UMVFD (upper members Volunteer Fire Department)"-->
+<!--                       class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--                </div>-->
+<!--                <div class="my-2 md:my-4 text-center px-4">-->
+<!--                  <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">Support anchors for underground tanks UMVFD (upper members Volunteer Fire Department)</h3>-->
+<!--                </div>-->
+<!--              </div>-->
+
+<!--                &lt;!&ndash; Slide 21 &ndash;&gt;-->
+<!--                <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--                  <div class="relative w-full pb-[56.25%]">-->
+<!--                    <img src="/gallery/21.png"-->
+<!--                         alt="Support anchors for underground tanks UMVFD (upper members Volunteer Fire Department)"-->
+<!--                         class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--                  </div>-->
+<!--                  <div class="my-2 md:my-4 text-center px-4">-->
+<!--                    <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">Support anchors for underground tanks UMVFD (upper members Volunteer Fire Department)</h3>-->
+<!--                  </div>-->
+<!--                </div>-->
+
+<!--                  &lt;!&ndash; Slide 22 &ndash;&gt;-->
+<!--                  <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--                    <div class="relative w-full pb-[56.25%]">-->
+<!--                      <img src="/gallery/22.png"-->
+<!--                           alt="Removal of mud for new lift station in Hatch, NM"-->
+<!--                           class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--                    </div>-->
+<!--                    <div class="my-2 md:my-4 text-center px-4">-->
+<!--                      <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">Removal of mud for new lift station in Hatch, NM</h3>-->
+<!--                    </div>-->
+<!--                  </div>-->
+
+<!--                    &lt;!&ndash; Slide 23 &ndash;&gt;-->
+<!--                    <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--                      <div class="relative w-full pb-[56.25%]">-->
+<!--                        <img src="/gallery/23.png"-->
+<!--                             alt="Removal of mud for new lift station in Hatch, NM"-->
+<!--                             class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--                      </div>-->
+<!--                      <div class="my-2 md:my-4 text-center px-4">-->
+<!--                        <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">Removal of mud for new lift station in Hatch, NM</h3>-->
+<!--                      </div>-->
+<!--                    </div>-->
+
+<!--                      &lt;!&ndash; Slide 24 &ndash;&gt;-->
+<!--                      <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--                        <div class="relative w-full pb-[56.25%]">-->
+<!--                          <img src="/gallery/24.png"-->
+<!--                               alt="Fish hatchery plumbing install in Glenwood, NM"-->
+<!--                               class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--                        </div>-->
+<!--                        <div class="my-2 md:my-4 text-center px-4">-->
+<!--                          <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">Fish hatchery plumbing install in Glenwood, NM</h3>-->
+<!--                        </div>-->
+<!--                      </div>-->
+
+<!--          &lt;!&ndash; Slide 25 &ndash;&gt;-->
+<!--          <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--            <div class="relative w-full pb-[56.25%]">-->
+<!--              <img src="/gallery/25.png" alt="Broken pipe at fish hatchery in Glenwood, NM"-->
+<!--                   class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--            </div>-->
+<!--            <div class="my-2 md:my-4 text-center px-4">-->
+<!--              <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">Broken pipe at fish hatchery in Glenwood, NM</h3>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Slide 26 &ndash;&gt;-->
+<!--          <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--            <div class="relative w-full pb-[56.25%]">-->
+<!--              <img src="/gallery/26.png" alt="Underground water storage tanks for UMVFD"-->
+<!--                   class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--            </div>-->
+<!--            <div class="my-2 md:my-4 text-center px-4">-->
+<!--              <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">Underground water storage tanks for UMVFD</h3>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Slide 27 &ndash;&gt;-->
+<!--          <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--            <div class="relative w-full pb-[56.25%]">-->
+<!--              <img src="/gallery/27.png" alt="Underground water storage tanks for UMVFD"-->
+<!--                   class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--            </div>-->
+<!--            <div class="my-2 md:my-4 text-center px-4">-->
+<!--              <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">Underground water storage tanks for UMVFD</h3>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Slide 28 &ndash;&gt;-->
+<!--          <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--            <div class="relative w-full pb-[56.25%]">-->
+<!--              <img src="/gallery/28.png" alt="Underground water storage tanks for UMVFD"-->
+<!--                   class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--            </div>-->
+<!--            <div class="my-2 md:my-4 text-center px-4">-->
+<!--              <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">Underground water storage tanks for UMVFD</h3>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Slide 29 &ndash;&gt;-->
+<!--          <div class="min-w-full flex-shrink-0 md:px-4 snap-start">-->
+<!--            <div class="relative w-full pb-[56.25%]">-->
+<!--              <img src="/gallery/29.png" alt="Ducting and piping at new Rec Center"-->
+<!--                   class="absolute inset-0 w-full h-full object-cover md:rounded-lg">-->
+<!--            </div>-->
+<!--            <div class="my-2 md:my-4 text-center px-4">-->
+<!--              <h3 class="text-base md:text-xl font-semibold text-light-blue break-words">Ducting and piping at new Rec Center</h3>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--&lt;!&ndash;          &lt;!&ndash; Slide 30 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="min-w-full flex-shrink-0 md:px-4 snap-start">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="relative w-full pb-[56.25%]">&ndash;&gt;-->
+<!--&lt;!&ndash;              <img src="IMG-URL/PATH" alt="ALT-TEXT"&ndash;&gt;-->
+<!--&lt;!&ndash;                   class="absolute inset-0 w-full h-full object-cover md:rounded-lg">&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="my-4 text-center">&ndash;&gt;-->
+<!--&lt;!&ndash;              <h3 class="md:text-xl font-semibold text-light-blue inline">CAPTION</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;          &lt;!&ndash; Slide 31 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="min-w-full flex-shrink-0 md:px-4 snap-start">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="relative w-full pb-[56.25%]">&ndash;&gt;-->
+<!--&lt;!&ndash;              <img src="IMG-URL/PATH" alt="ALT-TEXT"&ndash;&gt;-->
+<!--&lt;!&ndash;                   class="absolute inset-0 w-full h-full object-cover md:rounded-lg">&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="my-4 text-center">&ndash;&gt;-->
+<!--&lt;!&ndash;              <h3 class="md:text-xl font-semibold text-light-blue inline">CAPTION</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+
+<!--        </div>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      &lt;!&ndash; Navigation Buttons &ndash;&gt;-->
+<!--      <div class="flex justify-center gap-4 mt-2 md:mt-6">-->
+<!--        <button onclick="prevSlide(); resetAutoSlide();"-->
+<!--                class="bg-navy text-white px-6 py-2 rounded-lg hover:bg-gray-700">-->
+<!--          <svg class="w-6 h-6 text-light-blue" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"-->
+<!--               width="24" height="24" fill="none" viewBox="0 0 24 24">-->
+<!--            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/>-->
+<!--          </svg>-->
+<!--        </button>-->
+
+<!--        <button onclick="toggleAutoSlide();" id="pauseBtn"-->
+<!--                class="bg-navy text-white px-6 py-2 rounded-lg hover:bg-gray-700">-->
+<!--          <svg class="w-6 h-6 text-light-blue" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"-->
+<!--               width="24" height="24" fill="currentColor" viewBox="0 0 24 24">-->
+<!--            <path fill-rule="evenodd" d="M8 5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H8Zm7 0a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1Z" clip-rule="evenodd"/>-->
+<!--          </svg>-->
+<!--        </button>-->
+
+<!--        <button onclick="nextSlide(); resetAutoSlide();"-->
+<!--                class="bg-navy text-white px-6 py-2 rounded-lg hover:bg-gray-700">-->
+<!--          <svg class="w-6 h-6 text-light-blue" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"-->
+<!--               width="24" height="24" fill="none" viewBox="0 0 24 24">-->
+<!--            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>-->
+<!--          </svg>-->
+<!--        </button>-->
+<!--      </div>-->
+<!--  </section>-->
+
+
 
   <!-- Services Section -->
   <section id="services">
@@ -569,8 +892,8 @@
   </section>
 
   <!-- Testimonials Section -->
-  <section id="testimonials" class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-    <div class="max-w-screen-md mb-8 lg:mb-16">
+  <section id="testimonials" class="p-t-8 md:px-4 md:mx-auto max-w-full md:py-16 lg:px-6">
+    <div class="max-w-screen-md mb-8 px-3 pt-4 lg:mb-16">
       <h2 class="mb-4 text-5xl tracking-tight font-heading font-extrabold text-gray-100">What Our Customers
         Say</h2>
       <p class="text-light-blue sm:text-xl font-body-text">
@@ -578,9 +901,9 @@
         Our customers are our neighbors, and their satisfaction is our success. Read what local homeowners and businesses are saying about their experience with J&S.</p>
     </div>
     <div id="reviews-section"
-         class="grid mb-8 border border-gray-200 rounded-xl md:mb-12 md:grid-cols-2 bg-white shadow-md shadow-light-blue">
+         class="grid mb-4 md:rounded-xl md:mb-12 md:grid-cols-2 bg-white">
       <div
-        class="container flex flex-col items-center justify-center p-8  text-center bg-white border-b border-gray-200 rounded-t-0 md:rounded-ss-lg md:border-e">
+        class="container flex flex-col items-center justify-center p-8  text-center bg-white border-b-2 border-navy rounded-t-0 md:rounded-ss-lg md:border-e">
 
         <blockquote class="max-w-2xl mx-auto text-gray-500 ">
           <!--<h3 class="text-lg font-semibold text-gray-900">REVIEW TITLE HERE</h3>-->
@@ -604,7 +927,7 @@
       </div>
 
       <div
-        class="container flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-ss-lg md:border-e">
+        class="container flex flex-col items-center justify-center p-8  text-center bg-white border-b-2 border-navy rounded-t-0 md:rounded-ss-lg md:border-e">
 
         <blockquote class="max-w-2xl mx-auto text-gray-500">
           <!--<h3 class="text-lg font-semibold text-gray-900">REVIEW TITLE HERE</h3>-->
@@ -625,7 +948,7 @@
         </blockquote>
       </div>
       <div
-        class="container flex flex-col items-center justify-center p-8 text-center bg-white border-b-0 border-gray-200 rounded-b-2xl md:border-e">
+        class="container flex flex-col items-center justify-center p-8  text-center bg-white border-b-2 border-navy rounded-t-0 md:rounded-ss-lg md:border-e">
 
         <blockquote class="max-w-2xl mx-auto text-gray-500">
           <!--<h3 class="text-lg font-semibold text-gray-900">REVIEW TITLE HERE</h3>-->
@@ -670,7 +993,7 @@
 
   <!-- Review CTA -->
   <section class="border-t-2 border-b-2 border-gray-200">
-    <div class="bg-red py-8 px-4 mx-auto sm:py-16 lg:px-6">
+    <div class="bg-red py-6 px-4 mx-auto md:py-16 lg:px-6">
       <div class="mx-auto max-w-screen-sm text-center">
         <h2 class="mb-2 text-5xl tracking-tight font-heading font-extrabold text-gray-100 pb-2">Like our
           service?</h2>
@@ -686,7 +1009,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+  <section id="contact" class="py-8 px-4 md:mx-auto md:max-w-screen-xl md:py-16 lg:px-6">
     <div class="max-w-screen-md mb-4 lg:mb-16">
       <h2 class="mb-2 text-5xl tracking-tight font-heading font-extrabold text-gray-100">Get In Touch</h2>
       <p class="text-light-blue sm:text-xl font-body-text">
@@ -694,13 +1017,14 @@
         your plumbing and HVAC needs.</p>
     </div>
     <div class="container py-12 px-8 mx-auto lg:grid lg:grid-cols-2 md:grid-cols-1 lg:gap-16">
-      <form action="https://formspree.io/f/xrbdbnav" method="POST" id="contact-form" class="max-w-2xl p-8 rounded-lg">
+      <form action="https://formspree.io/f/xrbdbnav" method="POST" id="contact-form"
+            class="md:max-w-2xl  max-w-90vw p-8 rounded-lg">
         <div class="mb-6">
           <label for="name"
                  class="block mb-2 text-md font-body-text font-bold tracking-wider text-white ">Name
           </label>
           <input type="text" id="name" placeholder="First and Last Name"
-                 class="bg-gray-50 border border-gray-300 font-body-text text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                 class="bg-gray-50 border border-gray-300 font-body-text text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full md:p-2.5">
           <span id="name-error" class="error-message"></span>
         </div>
 
@@ -739,12 +1063,12 @@
 
       <div class="container mx-auto bg-light-blue rounded-xl px-12 py-8 flex flex-col justify-center items-center">
         <div class="flex items-baseline justify-center gap-2">
-        <i class="fa-solid fa-location-dot fa-xl py-2"></i>
+          <i class="fa-solid fa-location-dot fa-xl py-2"></i>
           <h5 class="mb-3 text-2xl font-semibold font-heading tracking-tight text-gray-900">Find Us</h5>
         </div>
-          <address class="mb-2 font-normal text-true-blue text-center font-body-text"><a href="http://bit.ly/46Yoxyn" target="_blank">2815
-            Pinos Altos Rd, Silver City, NM
-            88061</a></address>
+        <address class="mb-2 font-normal text-true-blue text-center font-body-text"><a href="http://bit.ly/46Yoxyn" target="_blank">2815
+          Pinos Altos Rd, Silver City, NM
+          88061</a></address>
         <hr class="h-px my-8 border-1 border-red w-3/4 mx-auto"/>
 
         <div class="flex items-baseline justify-center gap-2">
@@ -770,22 +1094,24 @@
 
 
   <!-- Footer -->
-  <footer class="bg-black px-8 py-6">
-    <div class="bg-light-blue rounded-lg shadow-sm m-4">
-      <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-        <div class="grid grid-cols-2 md:grid-cols-1">
+  <footer class="bg-black md:px-8 md:py-6">
+    <div class="bg-light-blue w-full md:rounded-lg shadow-sm md:m-4">
+      <div class="w-full md:max-w-screen-xl md:mx-auto p-4 md:py-8">
+        <div class="grid grid-cols-2">
           <a href="/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
             <img src="/assets/logo-v4.png" class="h-8" alt="J&S Plumbing and Heating Logo"/>
-            <span class="self-center text-2xl text-navy font-title font-semibold whitespace-nowrap">J&S Plumbing and
+            <span
+              class="hidden md:inline-block self-center text-2xl text-navy font-title font-semibold whitespace-nowrap">J&S
+              Plumbing and
             Heating</span>
           </a>
           <ul
-            class="grid grid-cols-4 md:pt-8 mb-6 text-sm font-body-text font-medium text-gray-500 sm:mb-0">
+            class="grid grid-cols-2 md:pt-8 md:mb-6 text-sm font-body-text font-medium text-gray-500 mb-0">
             <li>
               <a href="#about" class="hover:underline me-4 md:me-6 text-gray">About</a>
             </li>
             <li class="hover:underline me-4 md:me-6 text-gray">
-<!--              <a href="#" class="hover:underline me-4 md:me-6 text-gray">Privacy Policy</a>-->
+              <!--              <a href="#" class="hover:underline me-4 md:me-6 text-gray">Privacy Policy</a>-->
               <!-- Modal toggle -->
               <a data-modal-target="default-modal" data-modal-toggle="default-modal"
                  class="hover:underline me-4 md:me-6 text-gray"
@@ -824,33 +1150,33 @@
                       <h5 class="font-bold italic text-md text-red">Contact Form Information</h5>
                       <p class="leading-relaxed text-body">
                         When you submit our contact form, we collect:
-                        <ul class="list-disc mx-6">
-                      <li>Name</li>
-                      <li>Email address</li>
-                      <li>Phone number if one is provided</li>
-                      <li>Any message or information you choose to provide about your plumbing needs</li>
-                        </ul>
+                      <ul class="list-disc mx-6">
+                        <li>Name</li>
+                        <li>Email address</li>
+                        <li>Phone number if one is provided</li>
+                        <li>Any message or information you choose to provide about your plumbing needs</li>
+                      </ul>
                       </p>
 
                       <h5 class="font-bold italic text-md text-red">Automatically Collected Information</h5>
                       <p>When you visit our website, we may automatically collect basic technical information such as:
-                        <ul class="list-disc mx-6">
-                          <li>IP address</li>
-                          <li>Browser type</li>
-                          <li>Device type</li>
-                        </ul>
+                      <ul class="list-disc mx-6">
+                        <li>IP address</li>
+                        <li>Browser type</li>
+                        <li>Device type</li>
+                      </ul>
                       </p>
                       <p>This website is informational only and does not use cookies or tracking technologies.
                       </p>
 
                       <h4 class="font-bold text-red text-lg">How We Use Your Information</h4>
                       <p>We use the information you provide to:
-                        <ul class="list-disc mx-6">
-                          <li>Respond to your service inquiries</li>
-                          <li>Contact you about your plumbing needs</li>
-                          <li>Provide quotes and schedule services</li>
-                          <li>Maintain records of customer communication</li>
-                        </ul>
+                      <ul class="list-disc mx-6">
+                        <li>Respond to your service inquiries</li>
+                        <li>Contact you about your plumbing needs</li>
+                        <li>Provide quotes and schedule services</li>
+                        <li>Maintain records of customer communication</li>
+                      </ul>
                       </p>
                       <p>We do not use your information for marketing purposes unless you specifically request to receive updates from us.
                       </p>
@@ -861,10 +1187,10 @@
 
                       <h4 class="font-bold text-red text-lg">Sharing Your Information</h4>
                       <p>We do not sell, rent, or trade your personal information. We may share your information only in the following circumstances:
-                        <ul class="list-disc mx-6">
-                          <li>**Legal Requirements:** When required by law or to respond to legal process</li>
-                          <li>**Service Providers:** With trusted vendors who help us operate our website (such as web hosting services), who are obligated to keep your information confidential</li>
-                        </ul>
+                      <ul class="list-disc mx-6">
+                        <li>**Legal Requirements:** When required by law or to respond to legal process</li>
+                        <li>**Service Providers:** With trusted vendors who help us operate our website (such as web hosting services), who are obligated to keep your information confidential</li>
+                      </ul>
                       </p>
 
                       <h4 class="font-bold text-red text-lg">Data Retention</h4>
@@ -896,7 +1222,7 @@
 
                       <h4 class="font-bold text-red text-lg">Contact Us</h4>
                       <p>If you have questions about this Privacy Policy or wish to exercise your privacy rights,
-                          please contact us:</p>
+                        please contact us:</p>
                       <address>
                         <h5 class="font-bold">J&S Plumbing and Heating</h5>
                         2815 Pinos Altos Rd<br />
@@ -919,17 +1245,17 @@
               </div>
 
             </li>
-            <li>
-              <a href="#" class="hover:underline me-4 md:me-6 text-gray">Licensing</a>
-            </li>
-            <li>
-              <a href="#" class="hover:underline text-gray">Attribution</a>
-            </li>
+<!--            <li>-->
+<!--              <a href="#" class="hover:underline me-4 md:me-6 text-gray">Licensing</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="#" class="hover:underline text-gray">Attribution</a>-->
+<!--            </li>-->
           </ul>
         </div>
         <hr class="mb-6 mt-2 border-navy sm:mx-auto"/>
         <span class="block font-body-text text-sm text-gray sm:text-center">&copy; 2025 <a href="/"
-                                                                                          class="hover:underline">J&S
+                                                                                           class="hover:underline">J&S
           Plumbing and Heating, LLC™</a>. All Rights Reserved.</span>
       </div>
     </div>

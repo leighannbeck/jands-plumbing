@@ -104,3 +104,62 @@ form.addEventListener('submit', (e) => {
     displayErrors(validation.errors);
   }
 })
+
+let currentSlide = 0;
+const slider = document.getElementById('slider');
+const totalSlides = slider.children.length;
+let autoSlideInterval;
+let isPlaying = true;
+
+function updateSlider() {
+  slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  updateSlider();
+}
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+  updateSlider();
+}
+
+// Expose to global scope for inline HTML handlers (or when script is a module)
+window.nextSlide = nextSlide;
+window.prevSlide = prevSlide;
+window.resetAutoSlide = resetAutoSlide;
+window.toggleAutoSlide = toggleAutoSlide;
+
+function startAutoSlide() {
+  autoSlideInterval = setInterval(nextSlide, 3000);
+  isPlaying = true;
+  updatePauseButton();
+}
+
+function stopAutoSlide() {
+  clearInterval(autoSlideInterval);
+  isPlaying = false;
+  updatePauseButton();
+}
+
+function resetAutoSlide() {
+  stopAutoSlide();
+  startAutoSlide();
+}
+
+function toggleAutoSlide() {
+  if (isPlaying) {
+    stopAutoSlide();
+  } else {
+    startAutoSlide();
+  }
+}
+
+function updatePauseButton() {
+  const btn = document.getElementById('pauseBtn');
+  btn.textContent = isPlaying ? 'Pause' : 'Play';
+}
+
+// Start auto-sliding when page loads
+startAutoSlide();

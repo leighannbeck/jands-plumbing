@@ -3,6 +3,12 @@
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
 
+/* Prevent horizontal overflow */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 @theme {
   /* Colors */
   --color-true-blue: #2B5AA0;
